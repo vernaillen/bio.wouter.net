@@ -3,6 +3,12 @@ import LinkItem from "./LinkItem.vue";
 </script>
 
 <template>
+  <LinkItem url="https://harmonics.be/nl/blog/releaseyourinnerdancer">
+    <template #heading>Release Your Inner Dancer</template>
+    <template #subheading
+      >Upcoming Ecstatic Dance session on 3 September in Haaltert</template
+    >
+  </LinkItem>
   <LinkItem
     url="https://www.mixcloud.com/woutervernaillen/rebirth-ecstatic-dance-krimpvarkie-huisi/"
     mixcloud="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fwoutervernaillen%2Frebirth-ecstatic-dance-krimpvarkie-huisi%2F"
@@ -15,8 +21,8 @@ import LinkItem from "./LinkItem.vue";
 
   <LinkItem url="https://harmonics.be">
     <template #heading>Harmonics.be</template>
-    <template #subheading>Healing power of sound & music</template>
-    <p>ecstatic dance, soundbaths, music production</p>
+    <template #subheading>Healing power of sound, music and dance</template>
+    <p>ecstatic dance, immersive soundbaths, music production,...</p>
   </LinkItem>
 
   <LinkItem url="https://vernaillen.dev">
