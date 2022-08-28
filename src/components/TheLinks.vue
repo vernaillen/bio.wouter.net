@@ -3,11 +3,12 @@ import LinkItem from "./LinkItem.vue";
 </script>
 
 <template>
-  <LinkItem url="https://harmonics.be/nl/blog/releaseyourinnerdancer">
+  <LinkItem url="https://harmonics.be/en/blog/releaseyourinnerdancer">
     <template #heading>Release Your Inner Dancer</template>
     <template #subheading
       >Upcoming Ecstatic Dance session on 3 September in Haaltert</template
     >
+    <p>When was the last time you danced barefoot in the grass in nature?</p>
   </LinkItem>
   <LinkItem
     url="https://www.mixcloud.com/woutervernaillen/rebirth-ecstatic-dance-krimpvarkie-huisi/"

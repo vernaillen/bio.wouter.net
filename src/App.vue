@@ -15,9 +15,10 @@ import SocialIcons from "@/components/SocialIcons.vue";
         alt="Wouter Vernaillen Profile Image"
         class="profileImage"
       />
+      <h4>Wouter Vernaillen</h4>
       <p>
-        Wouter Vernaillen<br />Sound alchemist, Freelance Java/JS Developer,
-        Forever learning...
+        Sound alchemist, Ecstatic Dance facilitator,<br/>
+        Freelance Java/JS Developer, Forever learning...
       </p>
       <SocialIcons />
     </div>
@@ -77,10 +78,13 @@ h1 {
   font-size: 2rem;
 }
 h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
+}
+h4 {
+  font-size: 1.1rem;
 }
 h3.wouternet {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 p {
   padding: 15px;
