@@ -21,12 +21,12 @@
     </div>
     <div v-if="expanded" class="itemExpanded animated fadeIn">
       <slot></slot>
-      <div v-if="mixcloud" class="player">
+      <div v-if="soundcloud" class="player">
         <iframe
           width="100%"
-          height="60"
-          :src="mixcloud"
-          title="mixcloud"
+          height="166"
+          :src="soundcloud"
+          title="SoundCloud"
           frameborder="0"
         ></iframe>
       </div>
@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, ref, useSlots, watch } from "vue";
+import { nextTick, ref, watch } from "vue";
 import { useLinkItemState } from "../stores/linkItemState";
 import { storeToRefs } from "pinia";
 const linkItemState = useLinkItemState();
@@ -93,7 +93,7 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  mixcloud: {
+  soundcloud: {
     type: String,
     required: false,
   },

@@ -1,31 +1,21 @@
 <script setup lang="ts">
 import LinkItem from "./LinkItem.vue";
 </script>
-
 <template>
-  <LinkItem url="https://harmonics.be/en/blog/releaseyourinnerdancer">
+  <LinkItem
+    url="https://soundcloud.com/woutervernaillen/release-your-inner-dancer-ecstatic-dance"
+    soundcloud="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1337357878&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+  >
     <template #heading>Release Your Inner Dancer</template>
     <template #subheading
-      >Upcoming Ecstatic Dance session on 3 September in Haaltert</template
-    >
-    <p>When was the last time you danced barefoot in the grass in nature?</p>
-  </LinkItem>
-  <LinkItem
-    url="https://www.mixcloud.com/woutervernaillen/rebirth-ecstatic-dance-krimpvarkie-huisi/"
-    mixcloud="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fwoutervernaillen%2Frebirth-ecstatic-dance-krimpvarkie-huisi%2F"
-  >
-    <template #heading>Rebirth Ecstatic Dance</template>
-    <template #subheading
-      >DJ-set played during a private birthday/rebirth event</template
+      >Ecstatic Dance dj-set recorded on 3 September in Haaltert</template
     >
   </LinkItem>
-
   <LinkItem url="https://harmonics.be">
     <template #heading>Harmonics.be</template>
     <template #subheading>Healing power of sound, music and dance</template>
     <p>ecstatic dance, immersive soundbaths, music production,...</p>
   </LinkItem>
-
   <LinkItem url="https://vernaillen.dev">
     <template #heading>Vernaillen.dev</template>
     <template #subheading>Senior Full Stack Developer</template>
