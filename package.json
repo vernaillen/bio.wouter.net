@@ -14,10 +14,10 @@
     "prepushtest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run type-check && pnpm run build"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-brands-svg-icons": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
-    "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@fortawesome/fontawesome-svg-core": "6.2.0",
+    "@fortawesome/free-brands-svg-icons": "6.2.0",
+    "@fortawesome/free-solid-svg-icons": "6.2.0",
+    "@fortawesome/vue-fontawesome": "3.0.1",
     "animate.css": "^4.1.1",
     "pinia": "^2.0.22",
     "vue": "^3.2.39"
