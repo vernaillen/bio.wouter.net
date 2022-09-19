@@ -1,93 +1,7 @@
-<template>
-  <div class="itemWrapper">
-    <font-awesome-icon
-      v-if="!expanded"
-      @click="toggle"
-      :icon="['fas', 'angle-right']"
-    />
-    <font-awesome-icon
-      v-if="expanded"
-      @click="toggle"
-      :icon="['fas', 'angle-down']"
-    />
-    <div class="item" @click="toggle">
-      <div class="details">
-        <a href="#">
-          <slot name="heading"></slot>
-        </a>
-        <br />
-        <span class="sub"> <slot name="subheading"></slot> </span><br />
-      </div>
-    </div>
-    <div v-if="expanded" class="itemExpanded animated fadeIn">
-      <slot></slot>
-      <div v-if="soundcloud" class="player">
-        <iframe
-          width="100%"
-          height="166"
-          :src="soundcloud"
-          title="SoundCloud"
-          frameborder="0"
-        ></iframe>
-      </div>
-      <div v-if="youtube" class="player">
-        <iframe
-          width="100%"
-          height="315"
-          :src="youtube"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <button @click="openUrl">Open link</button>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
-import { nextTick, ref, watch } from "vue";
-import { useLinkItemState } from "../stores/linkItemState";
-import { storeToRefs } from "pinia";
-const linkItemState = useLinkItemState();
-const { isAllCollapsed } = storeToRefs(linkItemState);
-
-function easeInOutQuad(
-  currentTime: number,
-  start: number,
-  change: number,
-  duration: number
-) {
-  currentTime /= duration / 2;
-  if (currentTime < 1) return (change / 2) * currentTime * currentTime + start;
-  currentTime--;
-  return (-change / 2) * (currentTime * (currentTime - 2) - 1) + start;
-}
-
-function scrollToItem(el: MouseEvent) {
-  if (el.screenY > window.innerHeight) {
-    const to = el.screenY;
-    const duration = 500;
-    const element = document.documentElement;
-    const start = element.scrollTop;
-    const change = to - start;
-    const increment = 20;
-    let currentTime = 0;
-
-    const animateScroll = () => {
-      currentTime += increment;
-
-      const val = easeInOutQuad(currentTime, start, change, duration);
-
-      element.scrollTop = val;
-
-      if (currentTime < duration) setTimeout(animateScroll, increment);
-    };
-    animateScroll();
-  }
-}
-
+import { nextTick, ref, watch } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useLinkItemState } from '../stores/linkItemState'
 const props = defineProps({
   url: {
     type: String,
@@ -101,25 +15,115 @@ const props = defineProps({
     type: String,
     required: false,
   },
-});
+})
+const linkItemState = useLinkItemState()
+const { isAllCollapsed } = storeToRefs(linkItemState)
+
+function easeInOutQuad(
+  currentTime: number,
+  start: number,
+  change: number,
+  duration: number,
+) {
+  currentTime /= duration / 2
+  if (currentTime < 1)
+    return (change / 2) * currentTime * currentTime + start
+  currentTime--
+  return (-change / 2) * (currentTime * (currentTime - 2) - 1) + start
+}
+
+function scrollToItem(el: MouseEvent) {
+  if (el.screenY > window.innerHeight) {
+    const to = el.screenY
+    const duration = 500
+    const element = document.documentElement
+    const start = element.scrollTop
+    const change = to - start
+    const increment = 20
+    let currentTime = 0
+
+    const animateScroll = () => {
+      currentTime += increment
+
+      const val = easeInOutQuad(currentTime, start, change, duration)
+
+      element.scrollTop = val
+
+      if (currentTime < duration)
+        setTimeout(animateScroll, increment)
+    }
+    animateScroll()
+  }
+}
 
 const openUrl = () => {
-  window.open(props.url, "_blank");
-};
-const expanded = ref(false);
+  window.open(props.url, '_blank')
+}
+const expanded = ref(false)
 const toggle = async (el: MouseEvent) => {
-  linkItemState.collapseAll();
+  linkItemState.collapseAll()
   if (!expanded.value) {
-    await nextTick();
-    expanded.value = !expanded.value;
-    linkItemState.expandItem();
-    scrollToItem(el);
+    await nextTick()
+    expanded.value = !expanded.value
+    linkItemState.expandItem()
+    scrollToItem(el)
   }
-};
+}
 watch(isAllCollapsed, (newVal) => {
-  if (newVal) expanded.value = false;
-});
+  if (newVal)
+    expanded.value = false
+})
 </script>
+
+<template>
+  <div class="itemWrapper">
+    <font-awesome-icon
+      v-if="!expanded"
+      :icon="['fas', 'angle-right']"
+      @click="toggle"
+    />
+    <font-awesome-icon
+      v-if="expanded"
+      :icon="['fas', 'angle-down']"
+      @click="toggle"
+    />
+    <div class="item" @click="toggle">
+      <div class="details">
+        <a href="#">
+          <slot name="heading" />
+        </a>
+        <br>
+        <span class="sub"> <slot name="subheading" /> </span><br>
+      </div>
+    </div>
+    <div v-if="expanded" class="itemExpanded animated fadeIn">
+      <slot />
+      <div v-if="soundcloud" class="player">
+        <iframe
+          width="100%"
+          height="166"
+          :src="soundcloud"
+          title="SoundCloud"
+          frameborder="0"
+        />
+      </div>
+      <div v-if="youtube" class="player">
+        <iframe
+          width="100%"
+          height="315"
+          :src="youtube"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      </div>
+      <button @click="openUrl">
+        Open link
+      </button>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .itemWrapper {
@@ -197,6 +201,7 @@ i {
   color: var(--color-heading);
 }
 </style>
+
 <style>
 .itemWrapper p {
   padding: 20px;

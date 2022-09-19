@@ -1,15 +1,15 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
-export const useLinkItemState = defineStore("linkItemState", {
+export const useLinkItemState = defineStore('linkItemState', {
   state: () => ({
     isAllCollapsed: true,
   }),
   actions: {
     collapseAll() {
-      this.isAllCollapsed = true;
+      this.isAllCollapsed = true
     },
     expandItem() {
-      this.isAllCollapsed = false;
+      this.isAllCollapsed = false
     },
   },
-});
+})

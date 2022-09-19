@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
-import IconLogo from "@/components/icons/IconLogo.vue";
-import SocialIcons from "@/components/SocialIcons.vue";
+import { RouterView } from 'vue-router'
+import IconLogo from '@/components/icons/IconLogo.vue'
+import SocialIcons from '@/components/SocialIcons.vue'
 </script>
 
 <template>
@@ -9,15 +9,17 @@ import SocialIcons from "@/components/SocialIcons.vue";
     <IconLogo class="logo" />
 
     <div class="wrapper">
-      <h3 class="wouternet">wouter <span class="primary">on the</span> net</h3>
+      <h3 class="wouternet">
+        wouter <span class="primary">on the</span> net
+      </h3>
       <img
         src="./assets/wouter_profileImage.jpg"
         alt="Wouter Vernaillen Profile Image"
         class="profileImage"
-      />
+      >
       <h4>Wouter Vernaillen</h4>
       <p>
-        Sound alchemist, Ecstatic Dance facilitator,<br />
+        Sound alchemist, Ecstatic Dance facilitator,<br>
         Freelance Java/JS Developer, Forever learning...
       </p>
       <SocialIcons />
