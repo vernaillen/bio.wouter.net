@@ -12,9 +12,11 @@
     "typecheck": "vue-tsc --noEmit --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "cypress:install": "cypress install",
-    "cypress:open": "cypress open",
+    "cypress:open": "cypress open --config baseUrl=http://localhost:5173",
     "cypress:run": "cypress run",
-    "cypress:local": "start-server-and-test serve http://localhost:3000 cypress:run --config baseUrl=http://localhost:3000",
+    "cypress:serve": "cypress run --config baseUrl=http://localhost:3000",
+    "e2e": "start-server-and-test dev http://localhost:5173 cypress:open",
+    "e2e:serve": "start-server-and-test serve http://localhost:3000 cypress:serve",
     "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run coverage && pnpm run cypress:local",
     "prepushtest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run type-check && pnpm run build && serve dist"
   },
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
+    "@pinia/testing": "^0.0.14",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/jsdom": "^20.0.0",
     "@types/node": "^18.11.7",

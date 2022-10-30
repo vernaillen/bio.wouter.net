@@ -11,7 +11,7 @@ import LinkItem from './LinkItem.vue'
       Release Your Inner Dancer
     </template>
     <template #subheading>
-      Ecstatic Dance dj-set recorded on 3 September in Haaltert
+      Ecstatic Dance dj-set recorded on 3 September 2022 in Haaltert
     </template>
   </LinkItem>
   <LinkItem url="https://harmonics.be">
