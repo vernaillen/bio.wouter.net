@@ -30,7 +30,7 @@
     "vue": "^3.2.41"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.27.0",
+    "@antfu/eslint-config": "^0.29.0",
     "@pinia/testing": "^0.0.14",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/jsdom": "^20.0.0",
