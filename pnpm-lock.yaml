@@ -20,7 +20,7 @@ specifiers:
   '@vueuse/head': ^0.9.8
   animate.css: ^4.1.1
   cross-env: ^7.0.3
-  cypress: ^10.11.0
+  cypress: ^11.0.0
   eslint: ^8.26.0
   eslint-plugin-cypress: ^2.12.1
   eslint-plugin-vue: ^9.6.0
@@ -61,7 +61,7 @@ devDependencies:
   '@vue/tsconfig': 0.1.3_@types+node@18.11.7
   '@vueuse/head': 0.9.8_vue@3.2.41
   cross-env: 7.0.3
-  cypress: 10.11.0
+  cypress: 11.0.0
   eslint: 8.26.0
   eslint-plugin-cypress: 2.12.1_eslint@8.26.0
   eslint-plugin-vue: 9.6.0_eslint@8.26.0
@@ -1718,8 +1718,8 @@ packages:
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
 
-  /cypress/10.11.0:
-    resolution: {integrity: sha512-lsaE7dprw5DoXM00skni6W5ElVVLGAdRUUdZjX2dYsGjbY/QnpzWZ95Zom1mkGg0hAaO/QVTZoFVS7Jgr/GUPA==}
+  /cypress/11.0.0:
+    resolution: {integrity: sha512-mYXGi2Wjmy9shRjAUDugSMOr4uuzE2nl7hXQi3oQkIQsnwwBx2HNB8Vbfsix3A0zyPXlL5jTcbb6rCVWKRaXbg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
