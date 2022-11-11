@@ -19,7 +19,7 @@ import SocialIcons from '@/components/SocialIcons.vue'
       >
       <h4>Wouter Vernaillen</h4>
       <p>
-        Sound alchemist, Ecstatic Dance facilitator,<br>
+        Sound alchemist, Ecstatic Dance DJ, Trance Dance facilitator<br>
         Freelance Java/JS Developer, Forever learning...
       </p>
       <SocialIcons />
