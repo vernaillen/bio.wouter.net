@@ -33,7 +33,7 @@
       <font-awesome-icon :icon="['fab', 'twitter']" class="animated fadeIn" />
     </a>
     <a
-      class="text-body-color hover:text-primary mx-3" href="https://mastodon.vernaillen.dev/@wouter" rel="me"
+      class="text-body-color hover:text-primary mx-3" href="https://fosstodon.org/@vernaillen" rel="me"
       target="_blank"
     >
       <font-awesome-icon :icon="['fab', 'mastodon']" class="animated bounceIn" />
