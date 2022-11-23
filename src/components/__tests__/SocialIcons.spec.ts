@@ -7,6 +7,6 @@ describe('SocialIcons', () => {
   it('renders properly', () => {
     const wrapper = mount(SocialIcons)
     expect(wrapper.find('a font-awesome-icon').exists()).toBe(true)
-    expect(wrapper.findAll('a font-awesome-icon').length).toBe(4)
+    expect(wrapper.findAll('a font-awesome-icon').length).toBe(5)
   })
 })
