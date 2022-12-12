@@ -28,7 +28,7 @@
     "vue": "^3.2.45"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.33.1",
+    "@antfu/eslint-config": "^0.34.0",
     "@pinia/testing": "^0.0.14",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/jsdom": "^20.0.1",
