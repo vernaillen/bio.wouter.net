@@ -1,7 +1,12 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import IconLogo from '@/components/icons/IconLogo.vue'
-import SocialIcons from '@/components/SocialIcons.vue'
+if (process.client) {
+  const hostname = window.location.hostname
+  if (
+    hostname !== 'links.wouter.net'
+    && hostname !== 'localhost'
+    && hostname !== '127.0.0.1'
+  ) window.location.href = 'https://links.wouter.net'
+}
 </script>
 
 <template>
@@ -22,17 +27,28 @@ import SocialIcons from '@/components/SocialIcons.vue'
         Sound alchemist, Ecstatic Dance DJ, Trance Dance facilitator<br>
         Freelance Java/JS Developer, Forever learning...
       </p>
-      <SocialIcons />
+      <div class="socialIcons">
+        <a
+          v-for="social, index in useSocials()"
+          :key="index"
+          class="ud-text-body-color hover:ud-text-primary ud-mx-3"
+          :href="social.url"
+          :rel="social.name === 'Mastodon' ? 'rel' : 'noopener'"
+          :title="social.name" :alt="social.name" :aria-label="social.name"
+          target="_blank"
+        >
+          <Icon :name="social.icon" class="animated fadeIn" />
+        </a>
+      </div>
     </div>
   </header>
-
-  <RouterView />
+  <div>
+    <LinkItem v-for="link, index in useLinks()" :key="index" :link="link" />
+  </div>
 </template>
 
 <style>
-@import "@/assets/base.css";
-
-#app {
+#__nuxt {
   max-width: 620px;
   margin: 0 auto 30px auto;
   padding: 0 1rem;
@@ -79,16 +95,29 @@ h1 {
   font-weight: 500;
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.2rem;
 }
+
 h4 {
   font-size: 1.1rem;
 }
+
 h3.wouternet {
   margin-bottom: 20px;
 }
+
 p {
   padding: 15px;
+}
+.socialIcons {
+  margin: 10px;
+  text-align: center;
+}
+
+a {
+  font-size: 1.5rem;
+  margin: 6px;
 }
 </style>

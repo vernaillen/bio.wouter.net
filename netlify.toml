@@ -1,37 +1,7 @@
 [build.environment]
   NPM_FLAGS = "--version"
-  NODE_VERSION = "16"
+  NODE_VERSION = "18"
   
 [build]
   publish = "dist"
-  command = "npx pnpm install --frozen-lockfile --store=node_modules/.pnpm-store && npx pnpm run coverage && npx pnpm run build"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "https://wouter.net"
-  to = "https://links.wouter.net"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://www.wouter.net"
-  to = "https://links.wouter.net"
-  status = 301
-  force = true
-
-[[headers]]
-  for = "/manifest.webmanifest"
-  [headers.values]
-    Content-Type = "application/manifest+json"
-
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    cache-control = '''
-    max-age=31536000,
-    immutable
-    '''
+  command = "pnpm run build"

@@ -1,41 +1,7 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": [
-    "*.d.ts",
-    "src/**/*.ts",
-    "src/**/*.js",
-    "src/**/*.vue",
-    "test/**/*.ts",
-    "test/*.ts"
-  ],
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
   "exclude": [
-    "dist",
-    "node_modules"
-  ],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "module": "ESNext",
-    "target": "ESNext",
-    "lib": [
-      "DOM",
-      "ESNext"
-    ],
-    "strict": true,
-    "esModuleInterop": true,
-    "jsx": "preserve",
-    "skipLibCheck": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": [
-      "vite/client"
-    ],
-    "paths": {
-      "@/*": [
-        "src/*",
-        "./src/*"
-      ]
-    },
-    "allowJs": true
-  }
+    "./old"
+  ]
 }
