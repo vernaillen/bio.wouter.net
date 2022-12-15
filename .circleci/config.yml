@@ -42,6 +42,7 @@ jobs:
             - .gitignore
             - sonar-project.properties
             - .nuxt/tsconfig.json
+            - .output
       - slack/notify:
           channel: circleci
           event: fail
