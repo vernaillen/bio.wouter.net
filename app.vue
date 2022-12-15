@@ -5,6 +5,7 @@ if (process.client) {
     hostname !== 'links.wouter.net'
     && hostname !== 'localhost'
     && hostname !== '127.0.0.1'
+    && !hostname.includes('netlify.app')
   ) window.location.href = 'https://links.wouter.net'
 }
 </script>
