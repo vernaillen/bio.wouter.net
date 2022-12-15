@@ -36,9 +36,7 @@ jobs:
             - node_modules
             - cypress
             - cypress.config.ts
-            - vite.config.ts
             - tsconfig.json
-            - src
             - test
             - dist
             - .gitignore
