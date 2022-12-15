@@ -1,19 +1,13 @@
 <script setup lang="ts">
+import type { PropType } from 'vue'
 import { nextTick, ref, watch } from 'vue'
 import { storeToRefs } from 'pinia'
-import { useLinkItemState } from '../stores/linkItemState'
+import { useLinkItemState } from '~~/stores/linkItemState'
+import { type Link } from '~~/types/link'
 const props = defineProps({
-  url: {
-    type: String,
+  link: {
+    type: Object as PropType<Link>,
     required: true,
-  },
-  soundcloud: {
-    type: String,
-    required: false,
-  },
-  youtube: {
-    type: String,
-    required: false,
   },
 })
 const linkItemState = useLinkItemState()
@@ -57,7 +51,7 @@ function scrollToItem(el: MouseEvent) {
 }
 
 const openUrl = () => {
-  window.open(props.url, '_blank')
+  window.open(props.link.url, '_blank')
 }
 const expanded = ref(false)
 const toggle = async (el: MouseEvent) => {
@@ -77,41 +71,35 @@ watch(isAllCollapsed, (newVal) => {
 
 <template>
   <div class="itemWrapper">
-    <font-awesome-icon
-      v-if="!expanded"
-      :icon="['fas', 'angle-right']"
-      @click="toggle"
-    />
-    <font-awesome-icon
-      v-if="expanded"
-      :icon="['fas', 'angle-down']"
-      @click="toggle"
-    />
+    <Icon v-if="!expanded" name="uil:angle-right" size="2em" class="icon" @click="toggle" />
+    <Icon v-if="expanded" name="uil:angle-down" size="2em" class="icon" @click="toggle" />
     <div class="item" @click="toggle">
       <div class="details">
         <a href="#">
-          <slot name="heading" />
+          {{ link.title }}
         </a>
         <br>
-        <span class="sub"> <slot name="subheading" /> </span><br>
+        <span class="sub">{{ link.subTitle }}</span><br>
       </div>
     </div>
     <div v-if="expanded" class="itemExpanded animated fadeIn">
-      <slot />
-      <div v-if="soundcloud" class="player">
+      <p v-if="link.content">
+        {{ link.content }}
+      </p>
+      <div v-if="link.soundcloud" class="player">
         <iframe
           width="100%"
           height="166"
-          :src="soundcloud"
+          :src="link.soundcloud"
           title="SoundCloud"
           frameborder="0"
         />
       </div>
-      <div v-if="youtube" class="player">
+      <div v-if="link.youtube" class="player">
         <iframe
           width="100%"
           height="315"
-          :src="youtube"
+          :src="link.youtube"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -179,17 +167,13 @@ watch(isAllCollapsed, (newVal) => {
   text-align: center;
 }
 
-i {
-  display: flex;
-  place-items: center;
-  place-content: center;
+.icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
   color: var(--color-text);
-
-  border: 1px solid var(--color-border);
-  background: var(--color-background);
-  border-radius: 8px;
-  width: 50px;
-  height: 50px;
+  z-index: 100;
+  cursor: pointer;
 }
 
 .details a {
