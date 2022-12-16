@@ -9,9 +9,14 @@ const props = defineProps({
     type: Object as PropType<Link>,
     required: true,
   },
+  index: {
+    type: String,
+    required: true,
+  },
 })
 const linkItemState = useLinkItemState()
 const { isAllCollapsed } = storeToRefs(linkItemState)
+const itemWrapper = ref<HTMLElement>()
 
 function easeInOutQuad(
   currentTime: number,
@@ -26,13 +31,14 @@ function easeInOutQuad(
   return (-change / 2) * (currentTime * (currentTime - 2) - 1) + start
 }
 
-function scrollToItem(el: MouseEvent) {
-  if (el.screenY > window.innerHeight) {
-    const to = el.screenY
+function scrollToItem(el: HTMLElement) {
+  const itemBottom = el.offsetTop + el.offsetHeight
+
+  if (itemBottom > window.innerHeight) {
     const duration = 500
     const element = document.documentElement
     const start = element.scrollTop
-    const change = to - start
+    const change = itemBottom - window.innerHeight
     const increment = 20
     let currentTime = 0
 
@@ -60,7 +66,9 @@ const toggle = async (el: MouseEvent) => {
     await nextTick()
     expanded.value = !expanded.value
     linkItemState.expandItem()
-    scrollToItem(el)
+    await nextTick()
+    if (itemWrapper.value)
+      scrollToItem(itemWrapper.value)
   }
 }
 watch(isAllCollapsed, (newVal) => {
@@ -70,7 +78,7 @@ watch(isAllCollapsed, (newVal) => {
 </script>
 
 <template>
-  <div class="itemWrapper">
+  <div :id="`item${index}`" ref="itemWrapper" class="itemWrapper">
     <Icon v-if="!expanded" name="uil:angle-right" size="1.6em" class="icon" @click="toggle" />
     <Icon v-if="expanded" name="uil:angle-down" size="1.6em" class="icon" @click="toggle" />
     <div class="item" @click="toggle">

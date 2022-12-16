@@ -5,6 +5,7 @@ if (process.client) {
     hostname !== 'links.wouter.net'
     && hostname !== 'localhost'
     && hostname !== '127.0.0.1'
+    && hostname !== '10.0.2.17'
     && !hostname.includes('netlify.app')
   ) window.location.href = 'https://links.wouter.net'
 }
@@ -33,13 +34,13 @@ if (process.client) {
       </div>
       <p>
         Wouter Vernaillen<br>
-        Ecstatic Dance DJ & Trance Dance facilitator<br>
-        Freelance FullStack Java & JS Developer<br>
-        Forever learning...
+        ecstatic dance dj & trance dance facilitator<br>
+        freelance fullstack java/js developer<br>
+        ...forever learning...
       </p>
     </div>
   </header>
-  <LinkItem v-for="link, index in useLinks()" :key="index" :link="link" />
+  <LinkItem v-for="link, index in useLinks()" :key="index" :link="link" :index="index" />
   <footer class="wrapper">
     <GitHub />
   </footer>
