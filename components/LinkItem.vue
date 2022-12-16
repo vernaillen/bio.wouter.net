@@ -71,8 +71,8 @@ watch(isAllCollapsed, (newVal) => {
 
 <template>
   <div class="itemWrapper">
-    <Icon v-if="!expanded" name="uil:angle-right" size="2em" class="icon" @click="toggle" />
-    <Icon v-if="expanded" name="uil:angle-down" size="2em" class="icon" @click="toggle" />
+    <Icon v-if="!expanded" name="uil:angle-right" size="1.6em" class="icon" @click="toggle" />
+    <Icon v-if="expanded" name="uil:angle-down" size="1.6em" class="icon" @click="toggle" />
     <div class="item" @click="toggle">
       <div class="details">
         <a href="#">
@@ -117,7 +117,7 @@ watch(isAllCollapsed, (newVal) => {
 .itemWrapper {
   position: relative;
   overflow: hidden;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   border: 1px solid var(--color-border);
   border-radius: 0.375rem;
 }
@@ -169,19 +169,19 @@ watch(isAllCollapsed, (newVal) => {
 
 .icon {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 8px;
+  left: 6px;
   color: var(--color-text);
   z-index: 100;
   cursor: pointer;
 }
 
 .details a {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 .details .sub {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--color-heading);
 }
 </style>

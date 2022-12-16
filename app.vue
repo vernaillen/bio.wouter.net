@@ -18,16 +18,6 @@ if (process.client) {
       <h3 class="wouternet">
         wouter <span class="primary">on the</span> net
       </h3>
-      <img
-        src="./assets/wouter_profileImage.jpg"
-        alt="Wouter Vernaillen Profile Image"
-        class="profileImage"
-      >
-      <h4>Wouter Vernaillen</h4>
-      <p>
-        Sound alchemist, Ecstatic Dance DJ, Trance Dance facilitator<br>
-        Freelance Java/JS Developer, Forever learning...
-      </p>
       <div class="socialIcons">
         <a
           v-for="social, index in useSocials()"
@@ -41,11 +31,15 @@ if (process.client) {
           <Icon :name="social.icon" class="animated fadeIn" />
         </a>
       </div>
+      <p>
+        Wouter Vernaillen<br>
+        Ecstatic Dance DJ & Trance Dance facilitator<br>
+        Freelance FullStack Java & JS Developer<br>
+        Forever learning...
+      </p>
     </div>
   </header>
-  <div>
-    <LinkItem v-for="link, index in useLinks()" :key="index" :link="link" />
-  </div>
+  <LinkItem v-for="link, index in useLinks()" :key="index" :link="link" />
 </template>
 
 <style>
@@ -60,12 +54,11 @@ if (process.client) {
 header {
   line-height: 1.5;
   max-height: 100vh;
-  margin-bottom: 30px;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 1.6rem;
+  margin: 0 auto 1rem;
 }
 
 .profileImage {
@@ -106,14 +99,15 @@ h4 {
 }
 
 h3.wouternet {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 p {
-  padding: 15px;
+  font-size: 0.8rem;
+  padding: 10px;
 }
 .socialIcons {
-  margin: 10px;
+  margin: 12px;
   text-align: center;
 }
 
