@@ -40,6 +40,9 @@ if (process.client) {
     </div>
   </header>
   <LinkItem v-for="link, index in useLinks()" :key="index" :link="link" />
+  <footer class="wrapper">
+    <GitHub />
+  </footer>
 </template>
 
 <style>
@@ -106,13 +109,19 @@ p {
   font-size: 0.8rem;
   padding: 10px;
 }
+
 .socialIcons {
   margin: 12px;
   text-align: center;
 }
-
-a {
+.socialIcons a {
   font-size: 1.5rem;
   margin: 6px;
+}
+footer {
+  margin: 35px 10px;
+}
+footer p {
+  font-size: 0.7rem;
 }
 </style>
