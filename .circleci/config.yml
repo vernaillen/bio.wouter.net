@@ -43,6 +43,7 @@ jobs:
             - sonar-project.properties
             - .nuxt/tsconfig.json
             - .output
+            - .nuxt
       - slack/notify:
           channel: circleci
           event: fail
