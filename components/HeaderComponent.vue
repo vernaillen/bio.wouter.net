@@ -3,6 +3,7 @@ const colorMode = useColorMode()
 const toggleColorMode = () => {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
+const icon = colorMode.value === 'dark' ? 'material-symbols:light-mode' : 'material-symbols:dark-mode'
 
 if (process.client && window.matchMedia('(prefers-color-scheme: dark)').matches)
   colorMode.preference = 'dark'
@@ -14,7 +15,9 @@ if (process.client && window.matchMedia('(prefers-color-scheme: dark)').matches)
     <h3 class="wouternet">
       wouter <span class="primary">on the</span> net
     </h3>
-    <Icon name="line-md:light-dark-loop" size="1.5em" class="colorModeIcon" @click="toggleColorMode()" />
+    <Icon 
+    :name="colorMode.value === 'dark' ? 'material-symbols:light-mode' : 'material-symbols:dark-mode'" 
+    size="1.5em" class="colorModeIcon" @click="toggleColorMode()" />
   </header>
 </template>
 
@@ -55,9 +58,13 @@ h3.wouternet {
 }
 
 .colorModeIcon {
+    opacity: 0.7;
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
+}
+.colorModeIcon:hover {
+    opacity: 1;
 }
 </style>
