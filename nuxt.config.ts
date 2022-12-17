@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: 'en'
+        lang: 'en',
       },
       title: 'wouter on the net: the links',
       meta: [

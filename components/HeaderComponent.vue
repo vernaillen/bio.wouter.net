@@ -15,9 +15,10 @@ if (process.client && window.matchMedia('(prefers-color-scheme: dark)').matches)
     <h3 class="wouternet">
       wouter <span class="primary">on the</span> net
     </h3>
-    <Icon 
-    :name="colorMode.value === 'dark' ? 'material-symbols:light-mode' : 'material-symbols:dark-mode'" 
-    size="1.5em" class="colorModeIcon" @click="toggleColorMode()" />
+    <Icon
+      :name="colorMode.value === 'dark' ? 'material-symbols:light-mode' : 'material-symbols:dark-mode'"
+      size="1.5em" class="colorModeIcon" @click="toggleColorMode()"
+    />
   </header>
 </template>
 
