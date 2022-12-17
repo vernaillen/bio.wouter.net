@@ -79,8 +79,12 @@ watch(isAllCollapsed, (newVal) => {
 
 <template>
   <div :id="`item${index}`" ref="itemWrapper" class="itemWrapper">
-    <Icon v-if="!expanded" name="uil:angle-right" size="1.6em" class="icon" @click="toggle" />
-    <Icon v-if="expanded" name="uil:angle-down" size="1.6em" class="icon" @click="toggle" />
+    <Icon
+      name="uil:angle-right"
+      size="1.6em"
+      :class="expanded ? 'icon-expanded' : ''"
+      @click="toggle"
+    />
     <div class="item" @click="toggle">
       <div class="details">
         <a href="#">
@@ -90,7 +94,9 @@ watch(isAllCollapsed, (newVal) => {
         <span class="sub">{{ link.subTitle }}</span><br>
       </div>
     </div>
-    <div v-if="expanded" class="itemExpanded animated fadeIn">
+  </div>
+  <div v-if="expanded" class="itemExpandedWrapper">
+    <div class="itemExpanded animate__animated animate__slideInDown animate__faster">
       <p v-if="link.content">
         {{ link.content }}
       </p>
@@ -127,14 +133,11 @@ watch(isAllCollapsed, (newVal) => {
   overflow: hidden;
   margin-top: 1rem;
   border: 1px solid var(--color-border);
-  border-radius: 0.375rem;
+  border-radius: 8px;
+  z-index: 100;
 }
-.itemWrapper svg.svg-inline--fa {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-  cursor: pointer;
+.dark-mode .itemWrapper {
+  border: 1px solid var(--dark-color-border);
 }
 
 .itemWrapper .item {
@@ -150,16 +153,26 @@ watch(isAllCollapsed, (newVal) => {
   transition: all 0.5s;
   cursor: pointer;
 }
+.dark-mode .itemWrapper .item {
+  background-color: var(--dark-color-background);
+}
 .itemWrapper .item:hover {
   -moz-transform: scale(1.03);
   -webkit-transform: scale(1.03);
   transform: scale(1.03);
 }
-.itemWrapper .itemExpanded {
+.itemExpandedWrapper {
+  overflow: hidden;
+}
+.itemExpandedWrapper .itemExpanded {
+  z-index: 90;
+  overflow: hidden;
   text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
   background-color: var(--color-background-transparent);
 }
-.itemWrapper .itemExpanded button {
+.itemExpandedWrapper .itemExpanded button {
   background-color: hsla(53, 70.5%, 35.9%, 1);
   color: var(--color-text-button);
   cursor: pointer;
@@ -168,6 +181,13 @@ watch(isAllCollapsed, (newVal) => {
   font-weight: 600;
   border: 1px solid var(--color-border);
   border-radius: 0.2rem;
+}
+.dark-mode .itemExpandedWrapper .itemExpanded {
+  background-color: var(--dark-color-background-transparent);
+}
+.dark-mode .itemExpandedWrapper .itemExpanded button {
+  color: var(--dark-color-text-button);
+  border: 1px solid var(--dark-color-border);
 }
 
 .details {
@@ -182,6 +202,18 @@ watch(isAllCollapsed, (newVal) => {
   color: var(--color-text);
   z-index: 100;
   cursor: pointer;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.dark-mode .icon {
+  color: var(--dark-color-text);
+}
+.icon.icon-expanded {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .details a {
@@ -191,6 +223,12 @@ watch(isAllCollapsed, (newVal) => {
 .details .sub {
   font-size: 0.8rem;
   color: var(--color-heading);
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.dark-mode .details .sub {
+  color: var(--dark-color-heading);
 }
 </style>
 

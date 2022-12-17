@@ -1,4 +1,9 @@
 <script setup lang="ts">
+const colorMode = useColorMode()
+const toggleColorMode = () => {
+  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+}
+
 if (process.client) {
   const hostname = window.location.hostname
   if (
@@ -8,11 +13,15 @@ if (process.client) {
     && hostname !== '10.0.2.17'
     && !hostname.includes('netlify.app')
   ) window.location.href = 'https://links.wouter.net'
+
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+    colorMode.preference = 'dark'
 }
 </script>
 
 <template>
   <header>
+    <Icon name="line-md:light-dark-loop" size="1.5em" class="colorModeIcon" @click="toggleColorMode()" />
     <IconLogo class="logo" />
 
     <div class="wrapper">
@@ -40,7 +49,7 @@ if (process.client) {
       </p>
     </div>
   </header>
-  <LinkItem v-for="link, index in useLinks()" :key="index" :link="link" :index="index" />
+  <LinkItem v-for="link, index in useLinks()" :key="index" :link="link" :index="index.toString()" />
   <footer class="wrapper">
     <GitHub />
   </footer>
@@ -63,6 +72,13 @@ header {
 .logo {
   display: block;
   margin: 0 auto 1rem;
+}
+
+.colorModeIcon {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  cursor: pointer;
 }
 
 .profileImage {

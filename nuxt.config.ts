@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     'nuxt-icon',
+    '@nuxtjs/color-mode',
   ],
   css: [
     '@/assets/base.css',

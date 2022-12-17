@@ -26,7 +26,7 @@
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
-  --color-background-transparent: rgba(255, 255, 255, 0.6);
+  --color-background-transparent: rgba(255, 255, 255, 0.4);
 
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
@@ -39,25 +39,22 @@
   --color-logo-right: #9C8E1B;
 
   --section-gap: 160px;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-    --color-background-transparent: rgba(0, 0, 0, 0.3);
+  /* Dark mode colors */
+  --dark-color-background: var(--vt-c-black);
+  --dark-color-background-soft: var(--vt-c-black-soft);
+  --dark-color-background-mute: var(--vt-c-black-mute);
+  --dark-color-background-transparent: rgba(0, 0, 0, 0.3);
 
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
+  --dark-color-border: var(--vt-c-divider-dark-2);
+  --dark-color-border-hover: var(--vt-c-divider-dark-1);
 
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-    --color-text-button: var(--vt-c-text-dark-1);
+  --dark-color-heading: var(--vt-c-text-dark-1);
+  --dark-color-text: var(--vt-c-text-dark-2);
+  --dark-color-text-button: var(--vt-c-text-dark-1);
 
-    --color-logo-left: #9C8E1B;
-    --color-logo-right: #FFFFFF;
-  }
+  --dark-color-logo-left: #9C8E1B;
+  --dark-color-logo-right: #FFFFFF;
 }
 
 *,
@@ -74,7 +71,9 @@ body {
   color: var(--color-text);    
   --tw-bg-opacity: 1;
   background-color: var(--color-background-soft);
-  transition: color 0.5s, background-color 0.5s;
+  transition: color 0.5s, background-color 1s;
+  -moz-transition: color 0.5s, background-color 1s;
+  -webkit-transition: color 0.5s, background-color 1s;
   line-height: 1.6;
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -86,9 +85,32 @@ body {
 
 .fill-logo-left {
   fill: var(--color-logo-left);
+  -moz-transition: fill 1s;
+  -webkit-transition: fill 1s;
+  transition: fill 1s;
 }
 .fill-logo-right {
   fill: var(--color-logo-right);
+  -moz-transition: fill 1s;
+  -webkit-transition: fill 1s;
+  transition: fill 1s;
+}
+
+.dark-mode body {
+  color: var(--dark-color-text);
+  background-color: var(--dark-color-background-soft);
+}
+.dark-mode .fill-logo-left {
+  fill: var(--dark-color-logo-left);
+  -moz-transition: fill 1s;
+  -webkit-transition: fill 1s;
+  transition: fill 1s;
+}
+.dark-mode .fill-logo-right {
+  fill: var(--dark-color-logo-right);
+  -moz-transition: fill 1s;
+  -webkit-transition: fill 1s;
+  transition: fill 1s;
 }
 
 
