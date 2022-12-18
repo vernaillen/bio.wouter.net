@@ -11,7 +11,7 @@ describe('SocialIcons', () => {
   it('renders properly', async () => {
     const html = await $fetch('/')
 
-    expect(html).toContain('<div class="socialIcons"')
+    expect(html).toContain('<div class="socialIcons')
     expect(html).toContain('<svg')
     expect(html).toContain('href="https://github.com/vernaillen/"')
     expect(html).toContain('href="https://www.linkedin.com/in/woutervernaillen/"')
