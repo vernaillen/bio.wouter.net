@@ -3,37 +3,39 @@ const colorMode = useColorMode()
 const toggleColorMode = () => {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
-const icon = colorMode.value === 'dark' ? 'material-symbols:light-mode' : 'material-symbols:dark-mode'
-
-if (process.client && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  colorMode.preference = 'dark'
+const iconClass = (color: string) => {
+  if (colorMode.value === color)
+    return 'opacity-50 hover:opacity-100'
+  return 'opacity-0 hover:opacity-0'
+}
 </script>
 
 <template>
-  <header>
-    <IconLogo class="logo" />
-    <h3 class="wouternet">
-      wouter <span class="primary">on the</span> net
+  <header class="mt-0 text-center">
+    <IconLogo class="block mt-0 mb-5 mx-auto" />
+    <h3 class="mb-5 font-medium text-xl">
+      wouter <span class="primary font-medium">on the</span> net
     </h3>
-    <Icon
-      :name="colorMode.value === 'dark' ? 'material-symbols:light-mode' : 'material-symbols:dark-mode'"
-      size="1.5em" class="colorModeIcon" @click="toggleColorMode()"
-    />
+    <ClientOnly>
+      <Icon
+        v-for="color of ['light', 'dark']"
+        :key="color"
+        :class="iconClass(color)"
+        :name="`material-symbols:${color}-mode`" size="1.5em"
+        class="absolute top-4 right-4 cursor-pointer hover:text-primary"
+        @click="toggleColorMode"
+      />
+    </ClientOnly>
   </header>
 </template>
 
 <style scoped>
-header {
-    margin-top: 0;
-    text-align: center;
-}
-
 header.sticky {
     position: fixed;
     top: 0;
     z-index: 9995;
     width: 100%;
-    --tw-bg-opacity: .25;
+    --tw-bg-opacity: .2;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -47,25 +49,5 @@ header.sticky {
 }
 .dark-mode header.sticky {
     background-color: rgb(156 142 27 / var(--tw-bg-opacity));
-}
-
-.logo {
-    display: block;
-    margin: 0 auto 10px;
-}
-h3.wouternet {
-    font-weight: 500;
-    margin-bottom: 14px;
-}
-
-.colorModeIcon {
-    opacity: 0.7;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-.colorModeIcon:hover {
-    opacity: 1;
 }
 </style>
