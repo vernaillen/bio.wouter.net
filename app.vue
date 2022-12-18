@@ -14,7 +14,7 @@ if (process.client) {
 <template>
   <HeaderComponent />
   <div class="main container max-w-[620px] mt-5 text-center">
-    <div class="mt-8 mb-6">
+    <div class="socialIcons mt-8 mb-6">
       <a
         v-for="social, index in useSocials()"
         :key="index"
