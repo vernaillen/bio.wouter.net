@@ -14,7 +14,7 @@ if (commits.value && commits.value[0])
     <span v-if="lastCommit"><br>
       <a :href="lastCommit.html_url" target="_blank">last commit: {{ dayjs(lastCommit.commit.committer.date).format("DD MMM YYYY") }}</a>
       by <a :href="lastCommit.author.html_url" target="_blank">
-        <img v-if="lastCommit.author.avatar_url" class="avatar-user inline-block" :src="lastCommit.author.avatar_url">
+        <img v-if="lastCommit.author.avatar_url" alt="Avatar of GitHub commit author" class="avatar-user inline-block" :src="lastCommit.author.avatar_url">
         {{ lastCommit.author.login }}
       </a>
     </span>
