@@ -33,11 +33,11 @@ export const useLinks = (): Link[] => {
       content: 'Vue plugin wrapping Henrique Vianna\'s audioMotion-analyzer',
       url: 'https://vue-audiomotion-analyzer.dev/',
     },
-    {
+    /* {
       title: 'Meditative melody',
       subTitle: 'Live jam on the Subharmonicon',
       url: 'https://www.youtube.com/watch?v=whKBW_hu4nE',
       youtube: 'https://www.youtube.com/embed/whKBW_hu4nE',
-    },
+    }, */
   ]
 }
