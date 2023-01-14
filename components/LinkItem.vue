@@ -75,6 +75,12 @@ watch(isAllCollapsed, (newVal) => {
   if (newVal)
     expanded.value = false
 })
+onMounted(() => {
+  if (props.link.expand) {
+    expanded.value = true
+    linkItemState.expandItem()
+  }
+})
 </script>
 
 <template>
@@ -100,6 +106,7 @@ watch(isAllCollapsed, (newVal) => {
       <p v-if="link.content">
         {{ link.content }}
       </p>
+      <NuxtImg v-if="link.image" :src="link.image" width="586" class="cursor-pointer" @click="openUrl" />
       <div v-if="link.soundcloud" class="player">
         <iframe
           width="100%"

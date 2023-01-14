@@ -3,6 +3,13 @@ import type { Link } from '~~/types/link'
 export const useLinks = (): Link[] => {
   return [
     {
+      title: 'Trance Dance January 23',
+      subTitle: 'On January 23 we start with the first of a series of monthly Trance Dance sessions at vzw Dwarsligger in Melle',
+      url: 'https://harmonics.be/en/news/trancedance23january2023',
+      image: '/trancedance-fbevent-cover2.jpeg',
+      expand: true,
+    },
+    {
       title: 'Release Your Inner Dancer',
       subTitle: 'Ecstatic Dance dj-set recorded on 3 September 2022 in Haaltert',
       url: 'https://soundcloud.com/woutervernaillen/release-your-inner-dancer-ecstatic-dance',

@@ -3,6 +3,8 @@ export interface Link {
   subTitle: string
   url: string
   content?: string
+  image?: string
   soundcloud?: string
   youtube?: string
+  expand?: boolean
 }
