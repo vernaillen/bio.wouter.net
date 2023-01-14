@@ -64,7 +64,7 @@ onMounted(() => {
     <GitHub />
 
     <p class="text-body-color text-base text-center">
-      &copy; {{ useCurrentYear() }} Wouter Vernaillen
+      &copy; {{ useCurrentYear() }} <a href="https://vernaillen.dev" target="_blank">Wouter Vernaillen</a>
     </p>
     <a
       href="javascript:void(0)"

@@ -127,7 +127,7 @@ onMounted(() => {
           allowfullscreen
         />
       </div>
-      <button @click="openUrl">
+      <button class="my-1 py-1 px-3 bg-primary rounded-sm" @click="openUrl">
         Open link
       </button>
     </div>
@@ -178,16 +178,6 @@ onMounted(() => {
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background-color: var(--color-background-transparent);
-}
-.itemExpandedWrapper .itemExpanded button {
-  background-color: hsla(53, 70.5%, 35.9%, 1);
-  color: var(--color-text-button);
-  cursor: pointer;
-  margin-bottom: 10px;
-  padding: 10px 15px;
-  font-weight: 600;
-  border: 1px solid var(--color-border);
-  border-radius: 0.2rem;
 }
 .dark-mode .itemExpandedWrapper .itemExpanded {
   background-color: var(--dark-color-background-transparent);

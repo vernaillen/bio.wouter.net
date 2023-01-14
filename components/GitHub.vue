@@ -2,20 +2,17 @@
 import dayjs from 'dayjs'
 import type { CommitResponse } from '~~/types/github'
 
-const { data: commits } = await useLazyFetch<CommitResponse[]>('https://api.github.com/repos/vernaillen/links.wouter.net/commits')
-const lastCommit = ref()
-if (commits.value && commits.value[0])
-  lastCommit.value = commits.value[0]
+const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () => $fetch('https://api.github.com/repos/vernaillen/links.wouter.net/commits'))
 </script>
 
 <template>
   <p>
     <a href="https://github.com/vernaillen/links.wouter.net" target="_blank">find the code on <Icon name="uil:github" /> github</a>
-    <span v-if="lastCommit"><br>
-      <a :href="lastCommit.html_url" target="_blank">last commit: {{ dayjs(lastCommit.commit.committer.date).format("DD MMM YYYY") }}</a>
-      by <a :href="lastCommit.author.html_url" target="_blank">
-        <img v-if="lastCommit.author.avatar_url" alt="Avatar of GitHub commit author" class="avatar-user inline-block" :src="lastCommit.author.avatar_url">
-        {{ lastCommit.author.login }}
+    <span v-if="commits && commits[0]"><br>
+      <a :href="commits[0].html_url" target="_blank">last commit: {{ dayjs (commits[0].commit.committer.date).format("DD MMM YYYY") }}</a>
+      by <a :href="commits[0].author.html_url" target="_blank">
+        <img v-if="commits[0].author.avatar_url" alt="Avatar of GitHub commit author" class="avatar-user inline-block" :src="commits[0].author.avatar_url">
+        {{ commits[0].author.login }}
       </a>
     </span>
   </p>
