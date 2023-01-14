@@ -9,20 +9,17 @@ describe('Homepage', () => {
     cy.visit('/')
     cy.get('#__nuxt .itemWrapper').should('have.length', 5)
 
-    cy.get('#__nuxt .itemWrapper .item .details a').last().should('have.text', 'Meditative melody')
-    cy.get('#__nuxt .itemWrapper .item .details .sub').last().should('have.text', 'Live jam on the Subharmonicon')
+    cy.get('#__nuxt .itemWrapper .item .details a').last().should('have.text', 'Vue AudioMotion Analyzer')
+    cy.get('#__nuxt .itemWrapper .item .details .sub').last().should('have.text', 'High-resolution real-time audio spectrum analyzer')
   })
 
-  it('Contains Release Your Inner Dancer link', () => {
+  it('Contains expanded Trance Dance link with img', () => {
     cy.visit('/')
-    cy.get('#__nuxt .itemWrapper .item .details a').first().should('have.text', 'Release Your Inner Dancer')
-    cy.get('#__nuxt .itemWrapper .item .details .sub').first().should('have.text', 'Ecstatic Dance dj-set recorded on 3 September 2022 in Haaltert')
-  })
+    cy.get('#__nuxt .itemWrapper .item .details a').first().should('have.text', 'Trance Dance January 23')
+    cy.get('#__nuxt .itemWrapper .item .details .sub').first().should('have.text', 'On January 23 we start with the first of a series of monthly Trance Dance sessions at vzw Dwarsligger in Melle')
 
-  it('Contains Meditative melody link', () => {
-    cy.visit('/')
-
-    cy.get('#__nuxt .itemWrapper .item .details a').last().should('have.text', 'Meditative melody')
-    cy.get('#__nuxt .itemWrapper .item .details .sub').last().should('have.text', 'Live jam on the Subharmonicon')
+    cy.get('#__nuxt .itemExpandedWrapper').should('have.length', 1)
+    cy.get('#__nuxt .itemExpandedWrapper').first().should('be.visible')
+    cy.get('#__nuxt .itemExpandedWrapper img').should('have.length', 1)
   })
 })
