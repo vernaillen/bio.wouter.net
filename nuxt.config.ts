@@ -11,6 +11,12 @@ export default defineNuxtConfig({
     '@/assets/base.css',
     'animate.css/animate.min.css',
   ],
+  image: {
+    provider: 'twicpics',
+    twicpics: {
+      baseURL: 'https://vernaillen.twic.pics/links',
+    },
+  },
   app: {
     head: {
       htmlAttrs: {
