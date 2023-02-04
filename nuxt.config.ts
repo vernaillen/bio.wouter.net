@@ -13,10 +13,10 @@ export default defineNuxtConfig({
     'animate.css/animate.min.css',
   ],
   image: {
-    provider: 'twicpics',
-    twicpics: {
+    provider: 'static',
+    /* twicpics: {
       baseURL: 'https://vernaillen.twic.pics/links',
-    },
+    }, */
   },
   app: {
     head: {

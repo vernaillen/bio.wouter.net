@@ -13,10 +13,10 @@ describe('Homepage', () => {
     cy.get('#__nuxt .itemWrapper .item .details .sub').last().should('have.text', 'High-resolution real-time audio spectrum analyzer')
   })
 
-  it('Contains expanded Trance Dance link with img', () => {
+  it('Contains expanded NUXT 3 link with img', () => {
     cy.visit('/')
-    cy.get('#__nuxt .itemWrapper .item .details a').first().should('have.text', 'Trance Dance January 23')
-    cy.get('#__nuxt .itemWrapper .item .details .sub').first().should('have.text', 'On January 23 we start with the first of a series of monthly Trance Dance sessions at vzw Dwarsligger in Melle')
+    cy.get('#__nuxt .itemWrapper .item .details a').first().should('have.text', 'Nuxt 3')
+    cy.get('#__nuxt .itemWrapper .item .details .sub').first().should('have.text', 'Latest blog post on vernaillen.dev about learning Nuxt 3')
 
     cy.get('#__nuxt .itemExpandedWrapper').should('have.length', 1)
     cy.get('#__nuxt .itemExpandedWrapper').first().should('be.visible')

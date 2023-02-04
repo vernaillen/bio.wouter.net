@@ -18,11 +18,6 @@ export const useSocials = (): Social[] => {
       icon: 'uil:instagram',
     },
     {
-      name: 'Twitter',
-      url: 'https://twitter.com/vernaillen',
-      icon: 'uil:twitter',
-    },
-    {
       name: 'Mastodon',
       url: 'https://fosstodon.org/@vernaillen',
       icon: 'mdi:mastodon',
