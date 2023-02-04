@@ -6,7 +6,7 @@ export const useLinks = (): Link[] => {
       title: 'Nuxt 3',
       subTitle: 'Latest blog post on vernaillen.dev about learning Nuxt 3',
       url: 'https://vernaillen.dev/blog/nuxt',
-      image: '/nuxt-logo-green-light.png',
+      image: '/images/nuxt-logo-green-light.png',
       expand: true,
     },
     {
