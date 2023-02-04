@@ -14,9 +14,9 @@ export default defineNuxtConfig({
   ],
   image: {
     provider: 'static',
-    /* twicpics: {
-      baseURL: 'https://vernaillen.twic.pics/links',
-    }, */
+    twicpics: {
+      baseURL: 'https://vernaillen.twic.pics/linkswouter',
+    },
   },
   app: {
     head: {

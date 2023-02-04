@@ -15,7 +15,7 @@ describe('TheLinks', () => {
     expect(html).toContain('Harmonics.be')
     expect(html).toContain('Vernaillen.dev')
     expect(html).toContain('Vue AudioMotion Analyzer')
-    expect(html).toContain('Meditative melody')
+    expect(html).toContain('Nuxt 3')
 
     await expectNoClientErrors('/')
   })

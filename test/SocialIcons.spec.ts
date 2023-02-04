@@ -16,7 +16,6 @@ describe('SocialIcons', () => {
     expect(html).toContain('href="https://github.com/vernaillen/"')
     expect(html).toContain('href="https://www.linkedin.com/in/woutervernaillen/"')
     expect(html).toContain('href="https://www.instagram.com/woutervernaillen/"')
-    expect(html).toContain('href="https://twitter.com/vernaillen"')
     expect(html).toContain('href="https://fosstodon.org/@vernaillen"')
 
     await expectNoClientErrors('/')
