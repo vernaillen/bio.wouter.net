@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     'animate.css/animate.min.css',
   ],
   image: {
-    provider: 'static',
+    provider: 'twicpics',
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/linkswouter',
     },
