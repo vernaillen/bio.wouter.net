@@ -3,11 +3,17 @@ import type { Link } from '~~/types/link'
 export const useLinks = (): Link[] => {
   return [
     {
+      title: 'Trance Dance Music',
+      subTitle: 'Listen to the music of our last trancedance session',
+      image: '/images/trancedancemusic-23jan23.png',
+      url: 'https://harmonics.be/en/news/trancedancemusic',
+      expand: true,
+    },
+    {
       title: 'Nuxt 3',
       subTitle: 'Latest blog post on vernaillen.dev about learning Nuxt 3',
       url: 'https://vernaillen.dev/blog/nuxt',
       image: '/images/nuxt-logo-green-light.png',
-      expand: true,
     },
     {
       title: 'Harmonics.be',
