@@ -22,8 +22,10 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.6",
+    "@twicpics/components": "^0.15.1",
     "animate.css": "^4.1.1",
-    "dayjs": "^1.11.7"
+    "dayjs": "^1.11.7",
+    "vue-gtag": "^2.0.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.1",
