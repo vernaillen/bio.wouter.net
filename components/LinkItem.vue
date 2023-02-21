@@ -17,7 +17,7 @@ const props = defineProps({
 const linkItemState = useLinkItemState()
 const { isAllCollapsed } = storeToRefs(linkItemState)
 const itemWrapper = ref<HTMLElement>()
-
+/*
 function easeInOutQuad(
   currentTime: number,
   start: number,
@@ -55,20 +55,20 @@ function scrollToItem(el: HTMLElement) {
     animateScroll()
   }
 }
-
+*/
 const openUrl = () => {
   window.open(props.link.url, '_blank')
 }
 const expanded = ref(false)
-const toggle = async (el: MouseEvent) => {
+const toggle = async () => {
   linkItemState.collapseAll()
   if (!expanded.value) {
     await nextTick()
     expanded.value = !expanded.value
     linkItemState.expandItem()
-    await nextTick()
+    /* await nextTick()
     if (itemWrapper.value)
-      scrollToItem(itemWrapper.value)
+      scrollToItem(itemWrapper.value) */
   }
 }
 watch(isAllCollapsed, (newVal) => {

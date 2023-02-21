@@ -39,7 +39,7 @@ onMounted(() => {
     window.onscroll = function () {
       const headerElement = document.querySelector('header') as HTMLElement
       if (headerElement) {
-        if (window.scrollY > 50)
+        if (window.scrollY > 100)
           headerElement.classList.add('sticky')
         else
           headerElement.classList.remove('sticky')
