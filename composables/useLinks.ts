@@ -3,13 +3,6 @@ import type { Link } from '~~/types/link'
 export const useLinks = (): Link[] => {
   return [
     {
-      title: 'Trance Dance 20 February',
-      subTitle: 'On 20 February you\'re invited for the next Trance Dance session at vzw Dwarsligger in Melle.',
-      image: '/images/event-cover-20februari.png',
-      url: 'https://harmonics.be/en/news/trancedance20february2023',
-      expand: true,
-    },
-    {
       title: 'Trance Dance Music',
       subTitle: 'Listen to the music of our last trancedance session',
       image: '/images/trancedancemusic-23jan23.png',

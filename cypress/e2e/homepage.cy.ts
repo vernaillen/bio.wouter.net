@@ -5,9 +5,9 @@ describe('Homepage', () => {
     cy.contains('p', 'Wouter Vernaillen')
   })
 
-  it('Contains 7 links', () => {
+  it('Contains 6 links', () => {
     cy.visit('/')
-    cy.get('#__nuxt .itemWrapper').should('have.length', 7)
+    cy.get('#__nuxt .itemWrapper').should('have.length', 6)
 
     cy.get('#__nuxt .itemWrapper .item .details a').last().should('have.text', 'Vue AudioMotion Analyzer')
     cy.get('#__nuxt .itemWrapper .item .details .sub').last().should('have.text', 'High-resolution real-time audio spectrum analyzer')
