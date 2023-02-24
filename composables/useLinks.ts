@@ -7,6 +7,7 @@ export const useLinks = (): Link[] => {
       subTitle: 'Listen to the music of our last trancedance session',
       image: '/images/trancedancemusic-23jan23.png',
       url: 'https://harmonics.be/en/news/trancedancemusic',
+      expand: true,
     },
     {
       title: 'Nuxt 3',

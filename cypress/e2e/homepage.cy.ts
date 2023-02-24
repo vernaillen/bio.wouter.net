@@ -15,7 +15,7 @@ describe('Homepage', () => {
 
   it('First link is expanded', () => {
     cy.visit('/')
-    cy.get('#__nuxt .itemWrapper .item .details a').first().should('have.text', 'Trance Dance 20 February')
+    cy.get('#__nuxt .itemWrapper .item .details a').first().should('have.text', 'Trance Dance Music')
 
     cy.get('#__nuxt .itemExpandedWrapper').should('have.length', 1)
     cy.get('#__nuxt .itemExpandedWrapper').first().should('be.visible')
