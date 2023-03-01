@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxt/image-edge',
     '@nuxtjs/color-mode',
-    '@nuxtjs/plausible',
     '@nuxtjs/tailwindcss',
   ],
   css: [
