@@ -2,12 +2,12 @@
 import dayjs from 'dayjs'
 import type { CommitResponse } from '~~/types/github'
 
-const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () => $fetch('https://api.github.com/repos/vernaillen/links.wouter.net/commits'))
+const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () => $fetch('https://api.github.com/repos/vernaillen/links.vernaillen.com/commits'))
 </script>
 
 <template>
   <p>
-    <a href="https://github.com/vernaillen/links.wouter.net" target="_blank">find the code on <Icon name="uil:github" /> github</a>
+    <a href="https://github.com/vernaillen/links.vernaillen.com" target="_blank">find the code on <Icon name="uil:github" /> github</a>
     <span v-if="commits && commits[0]"><br>
       <a :href="commits[0].html_url" target="_blank">last commit: {{ dayjs (commits[0].commit.committer.date).format("DD MMM YYYY") }}</a>
       by <a :href="commits[0].author.html_url" target="_blank">
