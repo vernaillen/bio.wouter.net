@@ -7,6 +7,10 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
   ],
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark',
+  },
   css: [
     '@/assets/base.css',
     'animate.css/animate.min.css',
