@@ -111,6 +111,7 @@ onMounted(() => {
         :src="link.image"
         width="586" height="200"
         class="cursor-pointer"
+        preload
         :alt="link.title"
         @click="openUrl"
       />
