@@ -106,7 +106,14 @@ onMounted(() => {
       <p v-if="link.content">
         {{ link.content }}
       </p>
-      <NuxtImg v-if="link.image" :src="link.image" width="586" class="cursor-pointer" @click="openUrl" />
+      <NuxtImg
+        v-if="link.image"
+        :src="link.image"
+        width="586" height="200"
+        class="cursor-pointer"
+        :alt="link.title"
+        @click="openUrl"
+      />
       <div v-if="link.soundcloud" class="player">
         <iframe
           width="100%"
@@ -127,7 +134,7 @@ onMounted(() => {
           allowfullscreen
         />
       </div>
-      <button class="my-1 py-1 px-3 bg-primary rounded-sm" @click="openUrl">
+      <button class="my-1 py-1 px-3 text-white bg-primary rounded-sm" @click="openUrl">
         Open link
       </button>
     </div>

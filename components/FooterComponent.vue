@@ -12,7 +12,8 @@ function easeInOutQuad(
   return (-change / 2) * (currentTime * (currentTime - 2) - 1) + start
 }
 
-function scrollToTop() {
+function scrollToTop(event: Event) {
+  event.preventDefault()
   const to = 0
   const duration = 500
   const element = document.documentElement
@@ -67,9 +68,9 @@ onMounted(() => {
       &copy; {{ useCurrentYear() }} <a href="https://vernaillen.dev" target="_blank">Wouter Vernaillen</a>
     </p>
     <a
-      href="javascript:void(0)"
+      href="#__nuxt"
       class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-8 left-auto z-[999] hover:shadow-signUp hover:bg-opacity-80 shadow-md animate__animated animate__slideInUp"
-      @click="scrollToTop()"
+      @click="scrollToTop($event)"
     >
       <span class="w-3 h-3 border-t border-l border-white rotate-45 mt-[6px]" />
     </a>
