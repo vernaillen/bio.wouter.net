@@ -37,6 +37,12 @@ export default defineNuxtConfig({
         // <noscript>Javascript is required</noscript>
         { children: 'Javascript is required' },
       ],
+      link: [
+        {
+          href: 'https://vernaillen.twic.pics',
+          rel: 'preconnect',
+        },
+      ],
     },
   },
 })
