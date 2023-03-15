@@ -34,7 +34,7 @@
     "@nuxt/image-edge": "1.0.0-27968280.9739e4d",
     "@nuxt/test-utils": "^3.3.1",
     "@nuxtjs/color-mode": "^3.2.0",
-    "@nuxtjs/tailwindcss": "6.5.0",
+    "@nuxtjs/tailwindcss": "6.6.0",
     "@vitest/coverage-c8": "^0.29.2",
     "cypress": "^12.7.0",
     "eslint": "^8.36.0",
