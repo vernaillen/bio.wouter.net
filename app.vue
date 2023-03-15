@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { bootstrap } from 'vue-gtag'
 if (process.client) {
   const hostname = window.location.hostname
   if (
@@ -10,9 +9,6 @@ if (process.client) {
     && !hostname.includes('netlify.app')
   ) window.location.href = 'https://links.vernaillen.com'
 }
-onMounted(() => {
-  bootstrap()
-})
 </script>
 
 <template>
