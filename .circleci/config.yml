@@ -32,8 +32,11 @@ jobs:
           name: Test
           command: pnpm run coverage
       - run:
+          name: Install Cypress
+          command: pnpm run cy:install
+      - run:
           name: Run Cypress
-          command: pnpm run cy:local
+          command: pnpm run cy:local 
       - slack/notify:
           channel: circleci
           event: always
