@@ -5,7 +5,7 @@ if (process.client) {
     hostname !== 'links.vernaillen.com'
     && hostname !== 'localhost'
     && hostname !== '127.0.0.1'
-    && hostname !== '10.0.2.17'
+    && !hostname.startsWith('10.0.2.')
     && !hostname.includes('netlify.app')
   ) window.location.href = 'https://links.vernaillen.com'
 }

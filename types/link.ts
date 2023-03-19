@@ -1,7 +1,7 @@
 export interface Link {
   title: string
   subTitle: string
-  url: string
+  url: URL
   content?: string
   image?: string
   soundcloud?: string
