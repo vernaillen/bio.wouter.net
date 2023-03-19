@@ -18,7 +18,7 @@ const linkItemState = useLinkItemState()
 const { isAllCollapsed } = storeToRefs(linkItemState)
 const itemWrapper = ref<HTMLElement>()
 const openUrl = () => {
-  window.open(props.link.url, '_blank')
+  window.open(props.link.url.href, '_blank')
 }
 const expanded = ref(false)
 const toggle = async () => {
