@@ -19,7 +19,7 @@ if (process.client) {
         v-for="social, index in useSocials()"
         :key="index"
         :href="social.url.href"
-        :rel="social.name === 'Mastodon' ? 'rel' : 'noopener'"
+        :rel="social.name === 'Mastodon' ? 'me' : 'noopener'"
         :title="social.name" :alt="social.name" :aria-label="social.name"
         class="text-body-color hover:text-primary mx-2"
         target="_blank"
