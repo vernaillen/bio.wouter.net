@@ -15,7 +15,7 @@ if (process.client) {
   <HeaderComponent />
   <div class="main container max-w-[620px] mt-5 text-center">
     <div class="socialIcons mt-8 mb-6">
-      <a
+      <NuxtLink
         v-for="social, index in useSocials()"
         :key="index"
         :href="social.url"
@@ -25,7 +25,7 @@ if (process.client) {
         target="_blank"
       >
         <Icon :name="social.icon" size="1.5rem" class="animated fadeIn" />
-      </a>
+      </NuxtLink>
     </div>
     <p>
       Wouter Vernaillen<br>

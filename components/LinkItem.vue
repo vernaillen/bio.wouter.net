@@ -17,45 +17,6 @@ const props = defineProps({
 const linkItemState = useLinkItemState()
 const { isAllCollapsed } = storeToRefs(linkItemState)
 const itemWrapper = ref<HTMLElement>()
-/*
-function easeInOutQuad(
-  currentTime: number,
-  start: number,
-  change: number,
-  duration: number,
-) {
-  currentTime /= duration / 2
-  if (currentTime < 1)
-    return (change / 2) * currentTime * currentTime + start
-  currentTime--
-  return (-change / 2) * (currentTime * (currentTime - 2) - 1) + start
-}
-
-function scrollToItem(el: HTMLElement) {
-  const itemBottom = el.offsetTop + el.offsetHeight
-
-  if (itemBottom > window.innerHeight) {
-    const duration = 500
-    const element = document.documentElement
-    const start = element.scrollTop
-    const change = itemBottom - window.innerHeight
-    const increment = 20
-    let currentTime = 0
-
-    const animateScroll = () => {
-      currentTime += increment
-
-      const val = easeInOutQuad(currentTime, start, change, duration)
-
-      element.scrollTop = val
-
-      if (currentTime < duration)
-        setTimeout(animateScroll, increment)
-    }
-    animateScroll()
-  }
-}
-*/
 const openUrl = () => {
   window.open(props.link.url, '_blank')
 }
@@ -66,9 +27,6 @@ const toggle = async () => {
     await nextTick()
     expanded.value = !expanded.value
     linkItemState.expandItem()
-    /* await nextTick()
-    if (itemWrapper.value)
-      scrollToItem(itemWrapper.value) */
   }
 }
 watch(isAllCollapsed, (newVal) => {
@@ -93,9 +51,9 @@ onMounted(() => {
     />
     <div class="item" @click="toggle">
       <div class="details">
-        <a href="#">
+        <NuxtLink href="#">
           {{ link.title }}
-        </a>
+        </NuxtLink>
         <br>
         <span class="sub">{{ link.subTitle }}</span><br>
       </div>
@@ -121,7 +79,6 @@ onMounted(() => {
           height="166"
           :src="link.soundcloud"
           title="SoundCloud"
-          frameborder="0"
         />
       </div>
       <div v-if="link.youtube" class="player">
@@ -130,7 +87,6 @@ onMounted(() => {
           height="315"
           :src="link.youtube"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         />
