@@ -1,11 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@pinia/nuxt',
-    'nuxt-icon',
     '@nuxt/image-edge',
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    'nuxt-gtag',
+    'nuxt-icon',
   ],
   colorMode: {
     preference: 'dark',
@@ -20,6 +21,9 @@ export default defineNuxtConfig({
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/linkswouter',
     },
+  },
+  gtag: {
+    id: 'G-9H0TS07HEN',
   },
   app: {
     head: {
