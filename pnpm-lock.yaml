@@ -5,6 +5,7 @@ specifiers:
   '@nuxt/image-edge': 1.0.0-27991759.1a5eea1
   '@nuxt/test-utils': ^3.3.2
   '@nuxtjs/color-mode': ^3.2.0
+  '@nuxtjs/plausible': ^0.2.0
   '@nuxtjs/tailwindcss': 6.6.4
   '@pinia/nuxt': ^0.4.7
   '@typescript-eslint/eslint-plugin': ^5.56.0
@@ -17,7 +18,6 @@ specifiers:
   eslint-plugin-vue: ^9.10.0
   jsdom: ^21.1.1
   nuxt: 3.3.2
-  nuxt-gtag: ^0.3.0
   nuxt-icon: ^0.3.3
   release-it: ^15.9.3
   start-server-and-test: ^2.0.0
@@ -35,6 +35,7 @@ devDependencies:
   '@nuxt/image-edge': 1.0.0-27991759.1a5eea1
   '@nuxt/test-utils': 3.3.2_vue@3.2.47
   '@nuxtjs/color-mode': 3.2.0
+  '@nuxtjs/plausible': 0.2.0
   '@nuxtjs/tailwindcss': 6.6.4_webpack@5.76.3
   '@typescript-eslint/eslint-plugin': 5.56.0_2hcjazgfnbtq42tcc73br2vup4
   '@typescript-eslint/parser': 5.56.0_j4766f7ecgqbon3u7zlxn5zszu
@@ -44,7 +45,6 @@ devDependencies:
   eslint-plugin-vue: 9.10.0_eslint@8.36.0
   jsdom: 21.1.1
   nuxt: 3.3.2_wimzpmatuktm27l7vs7pjloin4
-  nuxt-gtag: 0.3.0
   nuxt-icon: 0.3.3_vue@3.2.47
   release-it: 15.9.3
   start-server-and-test: 2.0.0
@@ -1167,6 +1167,18 @@ packages:
       - supports-color
     dev: true
 
+  /@nuxtjs/plausible/0.2.0:
+    resolution: {integrity: sha512-mke+eW94PCca7zK0kNpNA9ULat5JCrBP2JUCmas6ZKpskU3+IaBv2OzWYzWJb/SsungfV9a/dukKbjAJeBTzhQ==}
+    dependencies:
+      '@nuxt/kit': 3.3.2
+      defu: 6.1.2
+      pathe: 1.1.0
+      plausible-tracker: 0.3.8
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
   /@nuxtjs/tailwindcss/6.6.4_webpack@5.76.3:
     resolution: {integrity: sha512-Lpgb1EmbHP6URHpi5D373BoNHBnODfnSstZk88SfrJ0r94r4jUaixtmSwLj9ot0wpO3Adz85RIg468/sCc4nAw==}
     dependencies:
@@ -1556,13 +1568,13 @@ packages:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
       '@types/eslint': 8.21.3
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
     dev: true
 
   /@types/eslint/8.21.3:
     resolution: {integrity: sha512-fa7GkppZVEByMWGbTtE5MbmXWJTVbrjjaS8K6uQj+XtuuUv1fsuPAxhygfqLmsb/Ufb3CV8deFCpiMfAgi00Sw==}
     dependencies:
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
     dev: true
 
@@ -6915,17 +6927,6 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-gtag/0.3.0:
-    resolution: {integrity: sha512-BTG7q066aPpf3lj2bGfBO7WZWOg3SO8YBOPe+qD+t8G6Av9mzyYkwZ2smP1l4XMksANQDc8MyuKWP+4RhMcDMg==}
-    dependencies:
-      '@nuxt/kit': 3.3.2
-      defu: 6.1.2
-      pathe: 1.1.0
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
   /nuxt-icon/0.3.3_vue@3.2.47:
     resolution: {integrity: sha512-KdhJAigBGTP8/YIFZ3orwetk40AgLq6VQ5HRYuDLmv5hiDptor9Ro+WIdZggHw7nciRxZvDdQkEwi9B5G/jrkQ==}
     dependencies:
@@ -7434,6 +7435,11 @@ packages:
       jsonc-parser: 3.2.0
       mlly: 1.2.0
       pathe: 1.1.0
+
+  /plausible-tracker/0.3.8:
+    resolution: {integrity: sha512-lmOWYQ7s9KOUJ1R+YTOR3HrjdbxIS2Z4de0P/Jx2dQPteznJl2eX3tXxKClpvbfyGP59B5bbhW8ftN59HbbFSg==}
+    engines: {node: '>=10'}
+    dev: true
 
   /pluralize/8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}

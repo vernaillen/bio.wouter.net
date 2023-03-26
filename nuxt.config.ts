@@ -3,9 +3,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image-edge',
     '@nuxtjs/color-mode',
+    '@nuxtjs/plausible',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    'nuxt-gtag',
     'nuxt-icon',
   ],
   colorMode: {
@@ -22,8 +22,8 @@ export default defineNuxtConfig({
       baseURL: 'https://vernaillen.twic.pics/linkswouter',
     },
   },
-  gtag: {
-    id: 'G-9H0TS07HEN',
+  plausible: {
+    apiHost: 'https://links.vernaillen.com/plio',
   },
   app: {
     head: {
