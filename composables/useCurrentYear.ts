@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
 
-export const useCurrentYear = () => {
+export function useCurrentYear() {
   const date = dayjs()
   return date.format('YYYY')
 }

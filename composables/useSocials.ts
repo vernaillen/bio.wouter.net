@@ -1,6 +1,6 @@
 import type { Social } from '~~/types/social'
 
-export const useSocials = (): Social[] => {
+export function useSocials(): Social[] {
   return [
     {
       name: 'GitHub',

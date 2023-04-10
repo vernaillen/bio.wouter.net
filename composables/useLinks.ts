@@ -1,6 +1,6 @@
 import type { Link } from '~~/types/link'
 
-export const useLinks = (): Link[] => {
+export function useLinks(): Link[] {
   return [
     {
       title: 'Trance Dance Music',

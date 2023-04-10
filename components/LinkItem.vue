@@ -4,6 +4,7 @@ import { nextTick, ref, watch } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useLinkItemState } from '~~/stores/linkItemState'
 import { type Link } from '~~/types/link'
+
 const props = defineProps({
   link: {
     type: Object as PropType<Link>,
@@ -17,11 +18,11 @@ const props = defineProps({
 const linkItemState = useLinkItemState()
 const { isAllCollapsed } = storeToRefs(linkItemState)
 const itemWrapper = ref<HTMLElement>()
-const openUrl = () => {
+function openUrl() {
   window.open(props.link.url.href, '_blank')
 }
 const expanded = ref(false)
-const toggle = async () => {
+async function toggle() {
   linkItemState.collapseAll()
   if (!expanded.value) {
     await nextTick()
