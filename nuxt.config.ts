@@ -8,23 +8,28 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'nuxt-icon',
   ],
+
   colorMode: {
     preference: 'dark',
     fallback: 'dark',
   },
+
   css: [
     '@/assets/base.css',
     'animate.css/animate.min.css',
   ],
+
   image: {
     provider: 'twicpics',
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/linkswouter',
     },
   },
+
   plausible: {
     apiHost: 'https://links.vernaillen.com/plio',
   },
+
   app: {
     head: {
       htmlAttrs: {
@@ -52,5 +57,9 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+
+  devtools: {
+    enabled: true,
   },
 })
