@@ -2,12 +2,12 @@
 if (process.client) {
   const hostname = window.location.hostname
   if (
-    hostname !== 'links.vernaillen.com'
-    && hostname !== 'localhost'
-    && hostname !== '127.0.0.1'
-    && !hostname.startsWith('10.0.2.')
-    && !hostname.includes('netlify.app')
-  ) window.location.href = 'https://links.vernaillen.com'
+    hostname !== 'links.vernaillen.com' &&
+    hostname !== 'localhost' &&
+    hostname !== '127.0.0.1' &&
+    !hostname.startsWith('10.0.2.') &&
+    !hostname.includes('netlify.app')
+  ) { window.location.href = 'https://links.vernaillen.com' }
 }
 </script>
 
@@ -19,7 +19,9 @@ if (process.client) {
         v-for="social, index in useSocials()"
         :key="index"
         :href="social.url.href"
-        :title="social.name" :alt="social.name" :aria-label="social.name"
+        :title="social.name"
+        :alt="social.name"
+        :aria-label="social.name"
         rel="me"
         class="text-body-color hover:text-primary mx-2"
         target="_blank"

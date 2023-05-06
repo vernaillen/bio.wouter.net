@@ -4,40 +4,40 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     screens: {
-      'sm': '540px',
+      sm: '540px',
       // => @media (min-width: 576px) { ... }
 
-      'md': '720px',
+      md: '720px',
       // => @media (min-width: 768px) { ... }
 
-      'lg': '960px',
+      lg: '960px',
       // => @media (min-width: 992px) { ... }
 
-      'xl': '1140px',
+      xl: '1140px',
       // => @media (min-width: 1200px) { ... }
 
-      '2xl': '1320px',
+      '2xl': '1320px'
       // => @media (min-width: 1400px) { ... }
     },
     container: {
       center: true,
-      padding: '16px',
+      padding: '16px'
     },
     extend: {
       colors: {
-        'black': '#231f20',
-        'dark': '#161314',
-        'primary': '#9C8E1B',
-        'body-color': '#999999',
+        black: '#231f20',
+        dark: '#161314',
+        primary: '#9C8E1B',
+        'body-color': '#999999'
       },
       boxShadow: {
         signUp: '0px 5px 10px rgba(4, 10, 34, 0.2)',
-        one: '0px 2px 3px rgba(7, 7, 77, 0.05)',
-      },
-    },
+        one: '0px 2px 3px rgba(7, 7, 77, 0.05)'
+      }
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }

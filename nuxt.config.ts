@@ -6,60 +6,60 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    'nuxt-icon',
+    'nuxt-icon'
   ],
 
   colorMode: {
     preference: 'dark',
-    fallback: 'dark',
+    fallback: 'dark'
   },
 
   css: [
     '@/assets/base.css',
-    'animate.css/animate.min.css',
+    'animate.css/animate.min.css'
   ],
 
   image: {
     provider: 'twicpics',
     twicpics: {
-      baseURL: 'https://vernaillen.twic.pics/linkswouter',
-    },
+      baseURL: 'https://vernaillen.twic.pics/linkswouter'
+    }
   },
 
   plausible: {
-    apiHost: 'https://links.vernaillen.com/plio',
+    apiHost: 'https://links.vernaillen.com/plio'
   },
 
   app: {
     head: {
       htmlAttrs: {
-        lang: 'en',
+        lang: 'en'
       },
       title: 'wouter on the net: the links',
       meta: [
         { name: 'description', content: 'Wouter Vernaillen: Sound alchemist, Ecstatic Dance DJ, Trance Dance facilitator, Freelance Java/JS Developer, Forever learning...' },
         {
           name: 'viewport',
-          content: 'width=device-width, initial-scale=1.0',
+          content: 'width=device-width, initial-scale=1.0'
         },
         {
-          charset: 'utf-8',
-        },
+          charset: 'utf-8'
+        }
       ],
       noscript: [
         // <noscript>Javascript is required</noscript>
-        { children: 'Javascript is required' },
+        { children: 'Javascript is required' }
       ],
       link: [
         {
           href: 'https://vernaillen.twic.pics',
-          rel: 'preconnect',
-        },
-      ],
-    },
+          rel: 'preconnect'
+        }
+      ]
+    }
   },
 
   devtools: {
-    enabled: true,
-  },
+    enabled: true
+  }
 })

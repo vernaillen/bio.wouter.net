@@ -2,14 +2,14 @@ import { defineStore } from 'pinia'
 
 export const useLinkItemState = defineStore('linkItemState', {
   state: () => ({
-    isAllCollapsed: true,
+    isAllCollapsed: true
   }),
   actions: {
-    collapseAll() {
+    collapseAll () {
       this.isAllCollapsed = true
     },
-    expandItem() {
+    expandItem () {
       this.isAllCollapsed = false
-    },
-  },
+    }
+  }
 })

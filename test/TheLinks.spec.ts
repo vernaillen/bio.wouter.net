@@ -4,7 +4,7 @@ import { expectNoClientErrors } from './utils'
 
 await setup({
   server: true,
-  browser: false,
+  browser: false
 })
 
 describe('TheLinks', () => {

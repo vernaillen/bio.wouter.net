@@ -1,26 +1,26 @@
 import type { Social } from '~~/types/social'
 
-export function useSocials(): Social[] {
+export function useSocials (): Social[] {
   return [
     {
       name: 'GitHub',
       url: new URL('https://github.com/vernaillen/'),
-      icon: 'uil:github',
+      icon: 'uil:github'
     },
     {
       name: 'LinkedIn',
       url: new URL('https://www.linkedin.com/in/woutervernaillen/'),
-      icon: 'uil:linkedin',
+      icon: 'uil:linkedin'
     },
     {
       name: 'Instagram',
       url: new URL('https://www.instagram.com/woutervernaillen/'),
-      icon: 'uil:instagram',
+      icon: 'uil:instagram'
     },
     {
       name: 'Mastodon',
       url: new URL('https://fosstodon.org/@vernaillen'),
-      icon: 'mdi:mastodon',
-    },
+      icon: 'mdi:mastodon'
+    }
   ]
 }

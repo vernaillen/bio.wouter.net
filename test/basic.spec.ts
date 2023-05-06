@@ -3,7 +3,7 @@ import { $fetch, isDev, setup } from '@nuxt/test-utils'
 
 await setup({
   server: true,
-  browser: false,
+  browser: false
 })
 
 describe('tests', () => {
