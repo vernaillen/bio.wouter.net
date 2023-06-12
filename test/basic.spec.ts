@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { $fetch, isDev, setup } from '@nuxt/test-utils'
+import { $fetch, isDev, setup } from '@nuxt/test-utils-edge'
 
 await setup({
   server: true,
