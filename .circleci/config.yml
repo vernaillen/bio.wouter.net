@@ -7,7 +7,7 @@ orbs:
 executors:
   pnpm-executor:
     docker:
-      - image: cimg/node:20.3.0-browsers
+      - image: cimg/node:20.1.0-browsers
 
 jobs:
   build:
@@ -16,6 +16,12 @@ jobs:
       - checkout
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Check node version
+          command: node -v
+      - run:
+          name: Check pnpm version
+          command: pnpm -v
       - run:
           name: Install packages
           command: pnpm install --frozen-lockfile
