@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    'nuxt-icon'
+    'nuxt-icon',
+    'nuxt-multi-cache'
   ],
 
   colorMode: {
@@ -56,6 +57,23 @@ export default defineNuxtConfig({
           rel: 'preconnect'
         }
       ]
+    }
+  },
+
+  multiCache: {
+    component: {
+      enabled: true
+    },
+    route: {
+      enabled: true
+    },
+    data: {
+      enabled: true
+    },
+    api: {
+      enabled: true,
+      cacheTagInvalidationDelay: 5000,
+      authorization: false
     }
   },
 

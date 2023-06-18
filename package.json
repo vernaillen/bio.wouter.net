@@ -42,6 +42,7 @@
     "jsdom": "^22.1.0",
     "nuxt": "^3.5.3",
     "nuxt-icon": "^0.4.1",
+    "nuxt-multi-cache": "^3.0.1",
     "release-it": "^15.11.0",
     "start-server-and-test": "^2.0.0",
     "typescript": "^5.1.3",
