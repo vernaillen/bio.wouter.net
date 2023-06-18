@@ -5,6 +5,7 @@ export interface Props {
     alt: string
     width: number
     height: number
+    imgClass?: string
 }
 const props = defineProps<Props>()
 const imgUrl = img(props.src, { width: props.width, height: props.height, fit: 'cover' })
@@ -21,6 +22,7 @@ const wrapperClass = computed(() => {
       :alt="alt"
       :width="width"
       :height="height"
+      :class="imgClass"
       class="object-cover rounded opacity-0 transform transition-all duration-1000"
     >
   </div>
