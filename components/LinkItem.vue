@@ -8,21 +8,21 @@ import { type Link } from '~~/types/link'
 const props = defineProps({
   link: {
     type: Object as PropType<Link>,
-    required: true,
+    required: true
   },
   index: {
     type: String,
-    required: true,
-  },
+    required: true
+  }
 })
 const linkItemState = useLinkItemState()
 const { isAllCollapsed } = storeToRefs(linkItemState)
 const itemWrapper = ref<HTMLElement>()
-function openUrl() {
+function openUrl () {
   window.open(props.link.url.href, '_blank')
 }
 const expanded = ref(false)
-async function toggle() {
+async function toggle () {
   linkItemState.collapseAll()
   if (!expanded.value) {
     await nextTick()
@@ -31,8 +31,7 @@ async function toggle() {
   }
 }
 watch(isAllCollapsed, (newVal) => {
-  if (newVal)
-    expanded.value = false
+  if (newVal) { expanded.value = false }
 })
 onMounted(() => {
   if (props.link.expand) {
@@ -65,12 +64,12 @@ onMounted(() => {
       <p v-if="link.content">
         {{ link.content }}
       </p>
-      <NuxtImg
+      <Image
         v-if="link.image"
         :src="link.image"
-        width="586" height="200"
+        :width="586"
+        :height="200"
         class="cursor-pointer"
-        preload
         :alt="link.title"
         @click="openUrl"
       />

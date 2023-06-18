@@ -24,7 +24,8 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
     "animate.css": "^4.1.1",
-    "dayjs": "^1.11.8"
+    "dayjs": "^1.11.8",
+    "vue3-lazyload": "^0.3.6"
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.6.1",
