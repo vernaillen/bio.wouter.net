@@ -1,18 +1,17 @@
 <script setup lang="ts">
-function easeInOutQuad(
+function easeInOutQuad (
   currentTime: number,
   start: number,
   change: number,
-  duration: number,
+  duration: number
 ) {
   currentTime /= duration / 2
-  if (currentTime < 1)
-    return (change / 2) * currentTime * currentTime + start
+  if (currentTime < 1) { return (change / 2) * currentTime * currentTime + start }
   currentTime--
   return (-change / 2) * (currentTime * (currentTime - 2) - 1) + start
 }
 
-function scrollToTop(event: Event) {
+function scrollToTop (event: Event) {
   event.preventDefault()
   const to = 0
   const duration = 500
@@ -29,8 +28,7 @@ function scrollToTop(event: Event) {
 
     element.scrollTop = val
 
-    if (currentTime < duration)
-      setTimeout(animateScroll, increment)
+    if (currentTime < duration) { setTimeout(animateScroll, increment) }
   }
   animateScroll()
 }
@@ -40,20 +38,14 @@ onMounted(() => {
     window.onscroll = function () {
       const headerElement = document.querySelector('header') as HTMLElement
       if (headerElement) {
-        if (window.scrollY > 100)
-          headerElement.classList.add('sticky')
-        else
-          headerElement.classList.remove('sticky')
+        if (window.scrollY > 100) { headerElement.classList.add('sticky') } else { headerElement.classList.remove('sticky') }
 
         // show or hide the back-top-top button
         const backToTop = document.querySelector('.back-to-top') as HTMLElement
         if (
-          document.body.scrollTop > 50
-                || document.documentElement.scrollTop > 50
-        )
-          backToTop.style.display = 'flex'
-        else
-          backToTop.style.display = 'none'
+          document.body.scrollTop > 50 ||
+                document.documentElement.scrollTop > 50
+        ) { backToTop.style.display = 'flex' } else { backToTop.style.display = 'none' }
       }
     }
   }
@@ -69,7 +61,7 @@ onMounted(() => {
       </NuxtLink>
     </p>
     <NuxtLink
-      href="#__nuxt"
+      href="#"
       class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-8 left-auto z-[999] hover:shadow-signUp hover:bg-opacity-80 shadow-md animate__animated animate__slideInUp"
       @click="scrollToTop($event)"
     >

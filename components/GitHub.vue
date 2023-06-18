@@ -13,7 +13,14 @@ const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () => $f
     <span v-if="commits && commits[0]"><br>
       <NuxtLink :href="commits[0].html_url" target="_blank">last commit: {{ dayjs (commits[0].commit.committer.date).format("DD MMM YYYY") }}</NuxtLink>
       by <NuxtLink :href="commits[0].author.html_url" target="_blank">
-        <img v-if="commits[0].author.avatar_url" width="13" height="16" alt="Avatar of GitHub commit author" class="avatar-user inline-block" :src="commits[0].author.avatar_url">
+        <Image
+          v-if="commits[0].author.avatar_url"
+          :width="13"
+          :height="16"
+          alt="Avatar of GitHub commit author"
+          class="avatar-user inline-block"
+          :src="commits[0].author.avatar_url"
+        />
         {{ commits[0].author.login }}
       </NuxtLink>
     </span>
