@@ -6,8 +6,7 @@ export function useLinks (): Link[] {
       title: 'Nuxt 3',
       subTitle: 'Latest blog post on vernaillen.dev about learning Nuxt 3',
       url: new URL('https://vernaillen.dev/blog/nuxt'),
-      image: '/images/nuxt-logo-green-light.png',
-      expand: true
+      image: '/images/nuxt-logo-green-light.png'
     },
     {
       title: 'Harmonics.be',
