@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { $fetch, setup } from '@nuxt/test-utils-edge'
+import { $fetch, setup } from '@nuxt/test-utils'
 import { expectNoClientErrors } from './utils'
 
 await setup({
