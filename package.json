@@ -1,7 +1,6 @@
 {
   "version": "1.2.1",
   "private": true,
-  "packageManager": "pnpm@8.6.2",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -16,10 +15,7 @@
     "cy:install": "cypress install",
     "cy:dev": "start-server-and-test dev http://localhost:3000 'cypress open --config baseUrl=http://localhost:3000'",
     "cy:local": "start-server-and-test preview http://localhost:3000 'cypress run --config baseUrl=http://localhost:3000'",
-    "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run coverage && pnpm run cy:local",
-    "release:patch": "npx release-it patch --ci",
-    "release:minor": "npx release-it minor --ci",
-    "release:major": "npx release-it major --ci"
+    "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run coverage && pnpm run cy:local"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
@@ -28,39 +24,24 @@
     "vue3-lazyload": "^0.3.6"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^0.6.1",
+    "@nuxt/devtools": "^0.6.3",
     "@nuxt/image": "1.0.0-rc.1",
-    "@nuxt/test-utils-edge": "3.6.0-28117308.634829a0",
-    "@nuxtjs/color-mode": "^3.2.0",
+    "@nuxt/test-utils": "^3.6.0",
+    "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/plausible": "^0.2.1",
-    "@nuxtjs/tailwindcss": "6.7.2",
+    "@nuxtjs/tailwindcss": "6.8.0",
     "@vitest/coverage-v8": "^0.32.2",
     "consola": "^3.1.0",
-    "cypress": "^12.14.0",
+    "cypress": "^12.15.0",
     "eslint": "^8.43.0",
     "jsdom": "^22.1.0",
-    "nuxt": "^3.5.3",
+    "nuxt": "^3.6.0",
     "nuxt-icon": "^0.4.1",
     "nuxt-multi-cache": "^3.0.1",
-    "release-it": "^15.11.0",
     "start-server-and-test": "^2.0.0",
     "typescript": "^5.1.3",
     "vitest": "^0.32.2",
-    "vue-tsc": "^1.8.0"
-  },
-  "release-it": {
-    "git": {
-      "commit": true,
-      "tag": true,
-      "push": true,
-      "commitMessage": "chore: release v${version}"
-    },
-    "github": {
-      "release": false
-    },
-    "npm": {
-      "publish": false
-    }
+    "vue-tsc": "^1.8.1"
   }
 }
