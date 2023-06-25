@@ -1,11 +1,10 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
-function toggleColorMode() {
+function toggleColorMode () {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
-function iconClass(color: string) {
-  if (colorMode.value === color)
-    return 'opacity-50 hover:opacity-100'
+function iconClass (color: string) {
+  if (colorMode.value === color) { return 'opacity-50 hover:opacity-100' }
   return 'opacity-0 hover:opacity-0'
 }
 </script>
@@ -13,15 +12,16 @@ function iconClass(color: string) {
 <template>
   <header class="mt-0 text-center">
     <IconLogo class="block mt-0 mb-5 mx-auto" />
-    <h3 class="mb-5 font-medium text-xl">
-      wouter <span class="primary font-medium">on the</span> net
+    <h3 class="mb-5 font-semibold tracking-wide text-3xl">
+      wouter <span class="primary font-semibold">on the</span> net
     </h3>
     <ClientOnly>
       <Icon
         v-for="color of ['light', 'dark']"
         :key="color"
         :class="iconClass(color)"
-        :name="`material-symbols:${color}-mode`" size="1.5em"
+        :name="`material-symbols:${color}-mode`"
+        size="1.5em"
         class="absolute top-4 right-4 cursor-pointer hover:text-primary"
         @click="toggleColorMode"
       />

@@ -29,8 +29,10 @@ if (process.client) {
         <Icon :name="social.icon" size="1.5rem" class="animated fadeIn" />
       </NuxtLink>
     </div>
+    <div class="mt-10 text-lg tracking-wide">
+      Wouter Vernaillen
+    </div>
     <p>
-      Wouter Vernaillen<br>
       ecstatic dance dj & trance dance facilitator<br>
       freelance fullstack java/js developer<br>
       ...forever learning...
