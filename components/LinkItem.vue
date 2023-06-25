@@ -91,9 +91,13 @@ onMounted(() => {
           allowfullscreen
         />
       </div>
-      <button class="my-1 py-1 px-3 text-white bg-primary rounded-sm" @click="openUrl">
-        Open link
-      </button>
+      <div class="my-1 py-1 px-3 text-white font-medium cursor-pointer relative" @click="openUrl">
+        <span class="relative">open link
+          <span class="absolute right-0 -mt-1">
+            <Icon name="uil:external-link-alt" />
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </template>
