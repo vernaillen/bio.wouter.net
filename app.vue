@@ -14,20 +14,8 @@ if (process.client) {
 <template>
   <HeaderComponent />
   <div class="main container mt-5 text-center text-dark dark:text-gray-200">
-    <div class="mt-8 mb-6 socialIcons">
-      <NuxtLink
-        v-for="social, index in useSocials()"
-        :key="index"
-        :href="social.url.href"
-        :title="social.name"
-        :alt="social.name"
-        :aria-label="social.name"
-        rel="me"
-        class="hover:text-primary mx-2"
-        target="_blank"
-      >
-        <UButton color="primary" variant="soft" :icon="social.icon" size="xs" />
-      </NuxtLink>
+    <div class="mt-8 mb-6">
+      <SocialIcons />
     </div>
     <div class="mt-5 mb-1 text-md font-bold tracking-wide">
       Wouter Vernaillen
