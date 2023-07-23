@@ -26,10 +26,10 @@ if (process.client) {
         class="hover:text-primary mx-2"
         target="_blank"
       >
-        <UButton color="gray" variant="soft" :icon="social.icon" class="animated fadeIn" />
+        <UButton color="primary" variant="soft" :icon="social.icon" size="xs" />
       </NuxtLink>
     </div>
-    <div class="mt-10 mb-2 text-lg tracking-wide">
+    <div class="mt-10 mb-2 text-lg font-bold tracking-wide">
       Wouter Vernaillen
     </div>
     <p class="text-sm mb-5">

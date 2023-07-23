@@ -19,6 +19,11 @@ export function useSocials (): Social[] {
     },
     {
       name: 'Mastodon',
+      url: new URL('https://twitter.com/vernaillen'),
+      icon: 'i-uil-twitter-alt'
+    },
+    {
+      name: 'Mastodon',
       url: new URL('https://fosstodon.org/@vernaillen'),
       icon: 'i-mdi-mastodon'
     }
