@@ -1,6 +1,7 @@
 // @vitest-environment nuxt
+import { mount } from '@vue/test-utils'
 import { describe, it, expect } from 'vitest'
-import { mockNuxtImport, mountSuspended } from 'vitest-environment-nuxt/utils'
+import { mockNuxtImport } from 'vitest-environment-nuxt/utils'
 import HeaderComponent from '~/components/HeaderComponent.vue'
 import IconLogo from '~/components/IconLogo.vue'
 
@@ -20,15 +21,15 @@ describe('components', () => {
   })
 
   it('Renders HeaderComponent', async () => {
-    const component = await mountSuspended(HeaderComponent)
+    const component = await mount(HeaderComponent)
+    expect(component.vm).toBeTruthy()
     expect(component.html()).toMatch('<header')
     expect(component.html()).toMatch('wouter')
   })
 
   it('Renders IconLogo', async () => {
-    const component = await mountSuspended(IconLogo)
+    const component = await mount(IconLogo)
     expect(component.html()).toMatch('<svg')
-    expect(component.html()).toMatch('fill-logo-left')
-    expect(component.html()).toMatch('fill-logo-right')
+    expect(component.html()).toMatch('class="fill-black dark:fill-primary-500"')
   })
 })

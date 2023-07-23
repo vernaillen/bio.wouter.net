@@ -1,4 +1,3 @@
-import colors from 'tailwindcss/colors'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import { iconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons'
 

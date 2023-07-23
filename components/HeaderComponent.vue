@@ -1,8 +1,5 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
-function toggleColorMode () {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-}
 </script>
 
 <template>
@@ -16,13 +13,13 @@ function toggleColorMode () {
         v-show="colorMode.value === 'dark'"
         name="i-material-symbols-dark-mode"
         class="absolute top-4 right-4 cursor-pointer text-primary-500 opacity-70 hover:opacity-100 w-5 h-5"
-        @click="toggleColorMode"
+        @click="colorMode.preference = 'light'"
       />
       <UIcon
         v-show="colorMode.value === 'light'"
         name="i-material-symbols-light-mode"
-        class="absolute top-4 right-4 cursor-pointer text-primary-500 opacity-70 hover:opacity-100  w-5 h-5"
-        @click="toggleColorMode"
+        class="absolute top-4 right-4 cursor-pointer text-primary-500 opacity-70 hover:opacity-100 w-5 h-5"
+        @click="colorMode.preference = 'dark'"
       />
     </div>
   </header>
