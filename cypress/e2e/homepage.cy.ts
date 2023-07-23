@@ -7,18 +7,14 @@ describe('Homepage', () => {
 
   it('Contains 5 links', () => {
     cy.visit('/')
-    cy.get('#__nuxt .itemWrapper').should('have.length', 5)
+    cy.get('div#theLinks > div > button').should('have.length', 5)
 
-    cy.get('#__nuxt .itemWrapper .item .details a').last().should('have.text', 'Vue AudioMotion Analyzer')
-    cy.get('#__nuxt .itemWrapper .item .details .sub').last().should('have.text', 'High-resolution real-time audio spectrum analyzer')
+    cy.get('div#theLinks > div > button').last().should('have.text', ' Vue AudioMotion Analyzer ')
+    cy.get('div#theLinks > div > div').last().should('contain.text', 'High-resolution real-time audio spectrum analyzer')
   })
 
-  /* it('First link is expanded', () => {
+  it('First link is Nuxt 3', () => {
     cy.visit('/')
-    cy.get('#__nuxt .itemWrapper .item .details a').first().should('have.text', 'Nuxt 3')
-
-    cy.get('#__nuxt .itemExpandedWrapper').should('have.length', 1)
-    cy.get('#__nuxt .itemExpandedWrapper').first().should('be.visible')
-    cy.get('#__nuxt .itemExpandedWrapper img').should('have.length', 1)
-  }) */
+    cy.get('div#theLinks > div > button').first().should('contain.text', 'Nuxt 3')
+  })
 })
