@@ -27,10 +27,10 @@ module.exports = {
   theme: {
     screens: {
       sm: '540px',
-      md: '620px',
-      lg: '620px',
-      xl: '620px',
-      '2xl': '620px'
+      md: '540px',
+      lg: '540px',
+      xl: '540px',
+      '2xl': '540px'
     },
     container: {
       center: true,
