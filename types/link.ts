@@ -6,6 +6,7 @@ export interface Link {
   urlDisplay?: string
   icon?: string
   iconClass?: string
+  iconDark?: string
   image?: string
   soundcloud?: string
   youtube?: string

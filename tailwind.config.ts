@@ -4,8 +4,13 @@ import { iconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons'
 const customIconSet = {
   prefix: 'custom',
   icons: {
-    'vernaillen-logo': {
+    'vernaillen-logo-light': {
       body: '<g fill="none" opacity="transparent"><path fill="#000000" d="M0 0 H92 V184 H172 V0 H264 V184 H344 V0 H436 V276 H0 Z"/><path fill="#9c8e1b" d="M490 0 H582 V184 H662 V0 H754 V276 H490 Z"/></g>',
+      width: 754,
+      height: 400
+    },
+    'vernaillen-logo-dark': {
+      body: '<g fill="none" opacity="transparent"><path fill="#9c8e1b" d="M0 0 H92 V184 H172 V0 H264 V184 H344 V0 H436 V276 H0 Z"/><path fill="#ffffff" d="M490 0 H582 V184 H662 V0 H754 V276 H490 Z"/></g>',
       width: 754,
       height: 400
     }

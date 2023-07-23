@@ -3,9 +3,9 @@ import type { Link } from '~~/types/link'
 export function useLinks (): Link[] {
   return [
     {
-      label: 'dev blog: Nuxt 3',
-      content: 'Nuxt 3 content',
-      subTitle: 'Latest blog post on <a href="https://vernaillen.dev/" target="_blank">vernaillen.dev</a> about learning Nuxt 3',
+      label: 'Are you Nuxt?',
+      subTitle: 'I think I am, cause I\'m learning Nuxt 3',
+      content: 'Latest blog post on <a href="https://vernaillen.dev/blog/nuxt" target="_blank">vernaillen.dev</a> about learning Nuxt 3',
       icon: 'i-logos-nuxt-icon',
       url: 'https://vernaillen.dev/blog/nuxt',
       urlDisplay: 'vernaillen.dev/blog/nuxt'
@@ -15,7 +15,6 @@ export function useLinks (): Link[] {
       content: 'Healing power of sound, music and dance:<br>Ecstatic dance, immersive soundbaths, music production,...',
       url: 'https://harmonics.be',
       urlDisplay: 'harmonics.be',
-      // image: 'https://harmonics.vercel.app/android-chrome-192x192.png'
       image: 'https://harmonics.vercel.app/images/harmonics_svglogo_bol.png'
     },
     {
@@ -23,7 +22,8 @@ export function useLinks (): Link[] {
       content: 'website for my freelance consultancy services as a full stack java developer',
       url: 'https://vernaillen.dev',
       urlDisplay: 'vernaillen.dev',
-      icon: 'i-custom-vernaillen-logo'
+      icon: 'i-custom-vernaillen-logo-light',
+      iconDark: 'i-custom-vernaillen-logo-dark'
     },
     {
       label: 'Release Your Inner Dancer',
