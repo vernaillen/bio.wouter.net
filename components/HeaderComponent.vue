@@ -3,29 +3,28 @@ const colorMode = useColorMode()
 function toggleColorMode () {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
-function iconClass (color: string) {
-  if (colorMode.value === color) { return 'opacity-50 hover:opacity-100' }
-  return 'opacity-0 hover:opacity-0'
-}
 </script>
 
 <template>
-  <header class="mt-0 text-center">
-    <IconLogo class="block mt-0 mb-5 mx-auto" />
-    <h3 class="mb-5 font-semibold tracking-wide text-3xl">
-      wouter <span class="primary font-semibold">on the</span> net
-    </h3>
-    <ClientOnly>
-      <Icon
-        v-for="color of ['light', 'dark']"
-        :key="color"
-        :class="iconClass(color)"
-        :name="`material-symbols:${color}-mode`"
-        size="1.5em"
-        class="absolute top-4 right-4 cursor-pointer hover:text-primary"
+  <header class="mt-0">
+    <div class="container mt-0 text-center relative">
+      <IconLogo class="block mt-0 mb-5 mx-auto" />
+      <h3 class="mb-5 font-semibold tracking-wide text-dark dark:text-light text-3xl">
+        wouter <span class="primary font-semibold">on the</span> net
+      </h3>
+      <UIcon
+        v-show="colorMode.value === 'dark'"
+        name="i-material-symbols-dark-mode"
+        class="absolute top-4 right-4 cursor-pointer text-primary-500 opacity-70 hover:opacity-100 w-5 h-5"
         @click="toggleColorMode"
       />
-    </ClientOnly>
+      <UIcon
+        v-show="colorMode.value === 'light'"
+        name="i-material-symbols-light-mode"
+        class="absolute top-4 right-4 cursor-pointer text-primary-500 opacity-70 hover:opacity-100  w-5 h-5"
+        @click="toggleColorMode"
+      />
+    </div>
   </header>
 </template>
 
@@ -33,6 +32,8 @@ function iconClass (color: string) {
 header.sticky {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 9995;
     width: 100%;
     --tw-bg-opacity: .2;

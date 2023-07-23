@@ -1,10 +1,13 @@
 export interface Link {
-  title: string
-  subTitle: string
-  url: URL
-  content?: string
+  label: string
+  subTitle?: string
+  content: string
+  url: string
+  urlDisplay?: string
+  icon?: string
+  iconClass?: string
   image?: string
   soundcloud?: string
   youtube?: string
-  expand?: boolean
+  defaultOpen?: boolean
 }

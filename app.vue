@@ -13,8 +13,8 @@ if (process.client) {
 
 <template>
   <HeaderComponent />
-  <div class="main container max-w-[620px] mt-5 text-center">
-    <div class="socialIcons mt-8 mb-6">
+  <div class="main container mt-5 text-center text-dark dark:text-gray-200">
+    <div class="mt-8 mb-6">
       <NuxtLink
         v-for="social, index in useSocials()"
         :key="index"
@@ -23,21 +23,21 @@ if (process.client) {
         :alt="social.name"
         :aria-label="social.name"
         rel="me"
-        class="text-body-color hover:text-primary mx-2"
+        class="hover:text-primary mx-2"
         target="_blank"
       >
-        <Icon :name="social.icon" size="1.5rem" class="animated fadeIn" />
+        <UButton color="gray" variant="soft" :icon="social.icon" class="animated fadeIn" />
       </NuxtLink>
     </div>
-    <div class="mt-10 text-lg tracking-wide">
+    <div class="mt-10 mb-2 text-lg tracking-wide">
       Wouter Vernaillen
     </div>
-    <p>
+    <p class="text-sm mb-5">
       ecstatic dance dj & trance dance facilitator<br>
       freelance fullstack java/js developer<br>
       ...forever learning...
     </p>
-    <LinkItem v-for="link, index in useLinks()" :key="index" :link="link" :index="index.toString()" />
+    <TheLinks />
   </div>
   <FooterComponent />
 </template>

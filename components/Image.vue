@@ -17,8 +17,7 @@ const wrapperClass = computed(() => {
 <template>
   <div :class="wrapperClass">
     <img
-      v-lazy="imgUrl"
-      src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+      :src="imgUrl"
       :alt="alt"
       :width="width"
       :height="height"

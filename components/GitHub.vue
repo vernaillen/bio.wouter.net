@@ -8,7 +8,7 @@ const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () => $f
 <template>
   <p>
     <NuxtLink href="https://github.com/vernaillen/links.vernaillen.com" target="_blank">
-      find the code on <Icon name="uil:github" /> github
+      find the code on <UIcon name="i-uil-github" class="-mb-[1px] w-3 h-3" />
     </NuxtLink>
     <span v-if="commits && commits[0]"><br>
       <NuxtLink :href="commits[0].html_url" target="_blank">

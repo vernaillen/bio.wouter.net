@@ -3,39 +3,50 @@ import type { Link } from '~~/types/link'
 export function useLinks (): Link[] {
   return [
     {
-      title: 'Nuxt 3',
-      subTitle: 'Latest blog post on vernaillen.dev about learning Nuxt 3',
-      url: new URL('https://vernaillen.dev/blog/nuxt'),
-      image: '/images/nuxt-logo-green-light.png'
+      label: 'Nuxt 3',
+      content: 'Nuxt 3 content',
+      subTitle: 'Latest blog post on <a href="https://vernaillen.dev/" target="_blank">vernaillen.dev</a> about learning Nuxt 3',
+      icon: 'i-logos-nuxt-icon',
+      url: 'https://vernaillen.dev/blog/nuxt',
+      urlDisplay: 'vernaillen.dev/blog/nuxt',
+      defaultOpen: true
     },
     {
-      title: 'Harmonics.be',
-      subTitle: 'Healing power of sound, music and dance',
-      content: 'Ecstatic dance, immersive soundbaths, music production,...',
-      url: new URL('https://harmonics.be')
+      label: 'Harmonics.be',
+      content: 'Healing power of sound, music and dance:<br>Ecstatic dance, immersive soundbaths, music production,...',
+      url: 'https://harmonics.be',
+      urlDisplay: 'harmonics.be',
+      // image: 'https://harmonics.vercel.app/android-chrome-192x192.png'
+      image: 'https://harmonics.vercel.app/images/harmonics_svglogo_bol.png'
     },
     {
-      title: 'Vernaillen.dev',
-      subTitle: 'Senior Full Stack Developer',
-      content: 'a brand new website for my freelance consultancy services as a full stack java developer',
-      url: new URL('https://vernaillen.dev')
+      label: 'Vernaillen.dev',
+      content: 'website for my freelance consultancy services as a full stack java developer',
+      url: 'https://vernaillen.dev',
+      urlDisplay: 'vernaillen.dev',
+      icon: 'i-custom-vernaillen-logo'
     },
     {
-      title: 'Release Your Inner Dancer',
-      subTitle: 'Ecstatic Dance dj-set recorded on 3 September 2022 in Haaltert',
-      url: new URL('https://soundcloud.com/woutervernaillen/release-your-inner-dancer-ecstatic-dance'),
+      label: 'Release Your Inner Dancer',
+      content: 'Ecstatic Dance dj-set recorded on 3 September 2022 in Haaltert',
+      icon: 'i-game-icons-oak-leaf',
+      iconClass: 'text-green-500',
+      url: 'https://soundcloud.com/woutervernaillen/release-your-inner-dancer-ecstatic-dance',
+      urlDisplay: 'soundcloud.com/...release-your-inner-dancer...',
       soundcloud: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1337357878&color=%23ff5500&inverse=false&auto_play=false&show_user=true'
     },
     {
-      title: 'Vue AudioMotion Analyzer',
+      label: 'Vue AudioMotion Analyzer',
       subTitle: 'High-resolution real-time audio spectrum analyzer',
       content: 'Vue plugin wrapping Henrique Vianna\'s audioMotion-analyzer',
-      url: new URL('https://vue-audiomotion-analyzer.dev/')
+      icon: 'i-arcticons-super-sound',
+      url: 'https://vue-audiomotion-analyzer.dev',
+      urlDisplay: 'vue-audiomotion-analyzer.dev'
     }
     /* {
-      title: 'Meditative melody',
+      label: 'Meditative melody',
       subTitle: 'Live jam on the Subharmonicon',
-      url: new URL('https://www.youtube.com/watch?v=whKBW_hu4nE'),
+      url: 'https://www.youtube.com/watch?v=whKBW_hu4nE',
       youtube: 'https://www.youtube.com/embed/whKBW_hu4nE',
     }, */
   ]

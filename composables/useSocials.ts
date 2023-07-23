@@ -5,22 +5,22 @@ export function useSocials (): Social[] {
     {
       name: 'GitHub',
       url: new URL('https://github.com/vernaillen/'),
-      icon: 'uil:github'
+      icon: 'i-uil-github'
     },
     {
       name: 'LinkedIn',
       url: new URL('https://www.linkedin.com/in/woutervernaillen/'),
-      icon: 'uil:linkedin'
+      icon: 'i-uil-linkedin'
     },
     {
       name: 'Instagram',
       url: new URL('https://www.instagram.com/woutervernaillen/'),
-      icon: 'uil:instagram'
+      icon: 'i-uil-instagram'
     },
     {
       name: 'Mastodon',
       url: new URL('https://fosstodon.org/@vernaillen'),
-      icon: 'mdi:mastodon'
+      icon: 'i-mdi-mastodon'
     }
   ]
 }

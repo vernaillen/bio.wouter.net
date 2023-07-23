@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
 import { nextTick, ref, watch } from 'vue'
-import { storeToRefs } from 'pinia'
-import { useLinkItemState } from '~~/stores/linkItemState'
 import { type Link } from '~~/types/link'
 
 const props = defineProps({
@@ -16,27 +14,27 @@ const props = defineProps({
   }
 })
 const linkItemState = useLinkItemState()
-const { isAllCollapsed } = storeToRefs(linkItemState)
+const isAllCollapsed = ref(linkItemState.isAllCollapsed)
 const itemWrapper = ref<HTMLElement>()
 function openUrl () {
   window.open(props.link.url.href, '_blank')
 }
 const expanded = ref(false)
 async function toggle () {
-  linkItemState.collapseAll()
+  linkItemState.isAllCollapsed = true
   if (!expanded.value) {
     await nextTick()
     expanded.value = !expanded.value
-    linkItemState.expandItem()
+    linkItemState.isAllCollapsed = false
   }
 }
-watch(isAllCollapsed, (newVal) => {
+watch(isAllCollapsed.value, (newVal) => {
   if (newVal) { expanded.value = false }
 })
 onMounted(() => {
   if (props.link.expand) {
     expanded.value = true
-    linkItemState.expandItem()
+    linkItemState.isAllCollapsed = false
   }
 })
 </script>
@@ -91,8 +89,9 @@ onMounted(() => {
           allowfullscreen
         />
       </div>
-      <div class="my-1 py-1 px-3 text-white font-medium cursor-pointer relative" @click="openUrl">
-        <span class="relative">open link
+      <div class="my-1 py-1 px-3 text-dark dark:text-white font-medium cursor-pointer relative" @click="openUrl">
+        <span class="relative">
+          open link
           <span class="absolute right-0 -mt-1">
             <Icon name="uil:external-link-alt" />
           </span>

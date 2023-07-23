@@ -2,23 +2,14 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
-    '@nuxtjs/color-mode',
+    '@nuxthq/ui',
     '@nuxtjs/plausible',
-    '@nuxtjs/tailwindcss',
-    '@pinia/nuxt',
-    'nuxt-icon',
-    'nuxt-multi-cache'
+    'nuxt-vitest'
   ],
 
   colorMode: {
-    preference: 'dark',
     fallback: 'dark'
   },
-
-  css: [
-    '@/assets/base.css',
-    'animate.css/animate.min.css'
-  ],
 
   image: {
     provider: 'twicpics',
@@ -47,6 +38,9 @@ export default defineNuxtConfig({
           charset: 'utf-8'
         }
       ],
+      bodyAttrs: {
+        class: 'bg-gray-100 dark:bg-black'
+      },
       noscript: [
         // <noscript>Javascript is required</noscript>
         { children: 'Javascript is required' }
@@ -55,25 +49,13 @@ export default defineNuxtConfig({
         {
           href: 'https://vernaillen.twic.pics',
           rel: 'preconnect'
+        },
+        {
+          rel: 'icon',
+          href: '/favicon.svg',
+          type: 'image/svg+xml'
         }
       ]
-    }
-  },
-
-  multiCache: {
-    component: {
-      enabled: true
-    },
-    route: {
-      enabled: true
-    },
-    data: {
-      enabled: true
-    },
-    api: {
-      enabled: true,
-      cacheTagInvalidationDelay: 5000,
-      authorization: false
     }
   },
 
@@ -81,5 +63,5 @@ export default defineNuxtConfig({
     enabled: true
   },
 
-  plugins: ['~/plugins/lazyload.ts']
+  debug: true
 })
