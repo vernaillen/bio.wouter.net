@@ -10,7 +10,7 @@
           :ui="{ padding: { sm: 'p-3' } }"
         >
           <template #leading>
-            <UIcon v-if="item.icon" :name="item.icon" class="h-6 mr-1" :class="item.iconClass" />
+            <UIcon v-if="item.icon" :name="item.icon" class="mr-1" :class="item.iconClass" />
             <img
               v-if="item.image"
               :src="item.image"

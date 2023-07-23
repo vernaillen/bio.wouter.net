@@ -14,7 +14,7 @@ if (process.client) {
 <template>
   <HeaderComponent />
   <div class="main container mt-5 text-center text-dark dark:text-gray-200">
-    <div class="mt-8 mb-6">
+    <div class="mt-8 mb-6 socialIcons">
       <NuxtLink
         v-for="social, index in useSocials()"
         :key="index"
@@ -29,10 +29,10 @@ if (process.client) {
         <UButton color="primary" variant="soft" :icon="social.icon" size="xs" />
       </NuxtLink>
     </div>
-    <div class="mt-10 mb-2 text-lg font-bold tracking-wide">
+    <div class="mt-5 mb-1 text-md font-bold tracking-wide">
       Wouter Vernaillen
     </div>
-    <p class="text-sm mb-5">
+    <p class="text-sm mb-2">
       ecstatic dance dj & trance dance facilitator<br>
       freelance fullstack java/js developer<br>
       ...forever learning...
