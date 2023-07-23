@@ -3,13 +3,12 @@ import type { Link } from '~~/types/link'
 export function useLinks (): Link[] {
   return [
     {
-      label: 'Nuxt 3',
+      label: 'dev blog: Nuxt 3',
       content: 'Nuxt 3 content',
       subTitle: 'Latest blog post on <a href="https://vernaillen.dev/" target="_blank">vernaillen.dev</a> about learning Nuxt 3',
       icon: 'i-logos-nuxt-icon',
       url: 'https://vernaillen.dev/blog/nuxt',
-      urlDisplay: 'vernaillen.dev/blog/nuxt',
-      defaultOpen: true
+      urlDisplay: 'vernaillen.dev/blog/nuxt'
     },
     {
       label: 'Harmonics.be',

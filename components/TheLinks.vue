@@ -9,12 +9,12 @@
         :ui="{ padding: { sm: 'p-3' } }"
       >
         <template #leading>
-          <UIcon v-if="item.icon" :name="item.icon" class="h-6" :class="item.iconClass" />
+          <UIcon v-if="item.icon" :name="item.icon" class="h-6 mr-1" :class="item.iconClass" />
           <img
             v-if="item.image"
             :src="item.image"
             :alt="item.label"
-            class="cursor-pointer h-6"
+            class="h-6 mr-1"
           >
         </template>
         {{ item.label }}
