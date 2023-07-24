@@ -4,7 +4,7 @@ export function useLinks (): Link[] {
   return [
     {
       label: 'Are you Nuxt?',
-      subTitle: 'I think I am, cause I\'m learning Nuxt 3',
+      subTitle: 'Learning Nuxt ',
       content: 'Latest blog post on <a href="https://vernaillen.dev/blog/nuxt" target="_blank">vernaillen.dev</a> about learning Nuxt 3',
       icon: 'i-logos-nuxt-icon',
       url: 'https://vernaillen.dev/blog/nuxt',
