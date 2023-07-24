@@ -15,6 +15,6 @@ describe('Homepage', () => {
 
   it('First link is Nuxt 3', () => {
     cy.visit('/')
-    cy.get('div#theLinks > div > button').first().should('contain.text', 'Nuxt 3')
+    cy.get('div#theLinks > div > button').first().should('have.text', ' Are you Nuxt? ')
   })
 })
