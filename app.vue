@@ -2,12 +2,12 @@
 if (process.client) {
   const hostname = window.location.hostname
   if (
-    hostname !== 'links.vernaillen.com' &&
+    hostname !== 'bio.wouter.net' &&
     hostname !== 'localhost' &&
     hostname !== '127.0.0.1' &&
     !hostname.startsWith('10.0.2.') &&
     !hostname.includes('netlify.app')
-  ) { window.location.href = 'https://links.vernaillen.com' }
+  ) { window.location.href = 'https://bio.wouter.net' }
 }
 </script>
 
