@@ -18,7 +18,7 @@ export function useSocials (): Social[] {
       icon: 'i-uil-instagram'
     },
     {
-      name: 'Mastodon',
+      name: 'Twitter',
       url: new URL('https://twitter.com/vernaillen'),
       icon: 'i-uil-twitter-alt'
     },
