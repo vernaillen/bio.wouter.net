@@ -2,12 +2,12 @@
 import dayjs from 'dayjs'
 import type { CommitResponse } from '@/types/github'
 
-const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () => $fetch('https://api.github.com/repos/vernaillen/links.vernaillen.com/commits'))
+const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () => $fetch('https://api.github.com/repos/vernaillen/bio.wouter.net/commits'))
 </script>
 
 <template>
   <p>
-    <NuxtLink href="https://github.com/vernaillen/links.vernaillen.com" target="_blank">
+    <NuxtLink href="https://github.com/vernaillen/bio.wouter.net" target="_blank">
       find the code on <UIcon name="i-uil-github" class="-mb-[1px] w-3 h-3" />
     </NuxtLink>
     <span v-if="commits && commits[0]"><br>

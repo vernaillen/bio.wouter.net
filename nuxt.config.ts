@@ -14,12 +14,12 @@ export default defineNuxtConfig({
   image: {
     provider: 'twicpics',
     twicpics: {
-      baseURL: 'https://vernaillen.twic.pics/linkswouter'
+      baseURL: 'https://vernaillen.twic.pics/biowouter/'
     }
   },
 
   plausible: {
-    apiHost: 'https://links.vernaillen.com/plio'
+    apiHost: 'https://bio.wouter.net/plio'
   },
 
   app: {
