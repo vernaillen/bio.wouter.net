@@ -1,7 +1,6 @@
 
 [![Nuxt][nuxt-src]][nuxt-href]<br/>
 [![CircleCI][circle-image]][circle-url]<br/>
-[![Netlify deploy][netlify-image]][netlify-url]<br/>
 [![SonarCloud Status][sonarcloud-image]][sonarcloud-url]<br/>
 
 # bio.wouter.net
