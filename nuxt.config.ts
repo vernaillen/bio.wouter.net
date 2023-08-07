@@ -39,7 +39,7 @@ export default defineNuxtConfig({
         }
       ],
       bodyAttrs: {
-        class: 'bg-gray-100 dark:bg-black'
+        class: 'bg-gray-50 dark:bg-black'
       },
       noscript: [
         // <noscript>Javascript is required</noscript>

@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="prose dark:prose-invert max-w-full">
     <GitHub />
     <p class="text-body-color text-base text-center">
       &copy; {{ useCurrentYear() }} <NuxtLink href="https://vernaillen.dev" target="_blank">

@@ -87,11 +87,41 @@ module.exports = {
         }
       },
 
-      typography: () => {
+      typography: (theme) => {
         return {
           DEFAULT: {
             css: {
-              maxWidth: '1320px'
+              maxWidth: '1320px',
+              a: {
+                fontWeight: theme('fontWeight.normal'),
+                textDecoration: 'none',
+                borderBottom: '1px solid rgba(123, 136, 86, 0.2)',
+                transition: 'color 0.3s cubic-bezier(.65, 0, .28, 1)',
+                position: 'relative'
+              },
+              'a:hover': {
+                color: 'blue'
+              },
+              'a::after': {
+                content: '""',
+                position: 'absolute',
+                left: '0',
+                bottom: '-2px',
+                right: '0',
+                height: '1px',
+                backgroundImage: 'linear-gradient(to right, #7b8856, #cacfbb)',
+                transformOrigin: '100% 100%',
+                transform: 'scaleX(0)',
+                transition: 'transform 0.3s cubic-bezier(.65, 0, .28, 1)'
+              },
+              'a:hover::after, a:focus::after': {
+                transformOrigin: '0% 100%',
+                transform: 'scaleX(1)'
+              },
+              'a.linkButton::after': {
+                backgroundImage: 'none',
+                backgroundColor: 'transparent'
+              }
             }
           }
         }
