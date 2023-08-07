@@ -1,3 +1,5 @@
+import { useLinks } from '../../composables/useLinks'
+
 describe('Homepage', () => {
   it('Contains intro', () => {
     cy.visit('/')
@@ -5,16 +7,18 @@ describe('Homepage', () => {
     cy.contains('p', 'Wouter Vernaillen')
   })
 
-  it('Contains 6 links', () => {
+  it('Contains correct number of links', () => {
     cy.visit('/')
-    cy.get('div#theLinks > div > button').should('have.length', 6)
-
-    cy.get('div#theLinks > div > button').last().should('have.text', ' Vue AudioMotion Analyzer ')
-    cy.get('div#theLinks > div > div').last().should('contain.text', 'High-resolution real-time audio spectrum analyzer')
+    cy.get('div#theLinks > div > div > button').should('have.length', useLinks().length)
   })
 
-  it('First link is Mastodon feed', () => {
+  it('First & last link contain correct label', () => {
     cy.visit('/')
-    cy.get('div#theLinks > div > button').first().should('have.text', ' Mastodon feed ')
+
+    const firstLink = useLinks()[0]
+    cy.get('div#theLinks > div > div > button').first().should('have.text', ' ' + firstLink.label + ' ')
+
+    const lastLink = useLinks()[useLinks().length - 1]
+    cy.get('div#theLinks > div > div > button').last().should('have.text', ' ' + lastLink.label + ' ')
   })
 })
