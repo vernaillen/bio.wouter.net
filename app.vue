@@ -20,8 +20,10 @@ if (process.client) {
     <div class="mt-5 mb-1 text-md font-bold tracking-wide">
       Wouter Vernaillen
     </div>
-    <p class="text-sm mb-2">
+    <p class="text-sm mb-2 prose">
+      earthling<br>
       ecstatic dance dj & trance dance facilitator<br>
+      modular synth noodler (eurorack)<br>
       freelance fullstack java/js developer<br>
       ...forever learning...
     </p>

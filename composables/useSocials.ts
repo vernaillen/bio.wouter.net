@@ -24,7 +24,7 @@ export function useSocials (): Social[] {
     },
     {
       name: 'Mastodon',
-      url: new URL('https://fosstodon.org/@vernaillen'),
+      url: new URL('https://elk.zone/fosstodon.org/@vernaillen'),
       icon: 'i-mdi-mastodon'
     }
   ]

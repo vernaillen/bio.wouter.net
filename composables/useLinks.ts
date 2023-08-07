@@ -3,6 +3,13 @@ import type { Link } from '~~/types/link'
 export function useLinks (): Link[] {
   return [
     {
+      label: 'Mastodon feed',
+      content: 'Social feed on <a href="https://vernaillen.dev/feed" target="_blank">vernaillen.dev</a> fetching posts from my <a href="https://elk.zone/fosstodon.org/@vernaillen" target="_blank">Mastodon account</a>',
+      icon: 'i-logos-mastodon-icon',
+      url: 'https://vernaillen.dev/feed',
+      urlDisplay: 'vernaillen.dev/feed'
+    },
+    {
       label: 'Are you Nuxt?',
       subTitle: 'Learning Nuxt 3',
       content: 'Latest blog post on <a href="https://vernaillen.dev/blog/nuxt" target="_blank">vernaillen.dev</a> about learning Nuxt 3',
