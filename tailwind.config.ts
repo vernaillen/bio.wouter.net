@@ -99,8 +99,12 @@ module.exports = {
                 transition: 'color 0.3s cubic-bezier(.65, 0, .28, 1)',
                 position: 'relative'
               },
+              'a, .primary': {
+                color: 'hsla(53, 70.5%, 35.9%, 1)',
+                transition: '0.4s'
+              },
               'a:hover': {
-                color: 'blue'
+                color: 'hsla(53, 70.5%, 35.9%, 0.8)'
               },
               'a::after': {
                 content: '""',

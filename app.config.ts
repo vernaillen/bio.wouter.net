@@ -1,6 +1,7 @@
 export default defineAppConfig({
-  longDateFormat: 'DD MMMM YYYY',
-  shortDateFormat: 'DD MMM YYYY',
+  github: {
+    repo: 'vernaillen/bio.wouter.net'
+  },
   ui: {
     primary: 'vernaillen',
     gray: 'masala',

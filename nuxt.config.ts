@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
+  extends: [
+    '@vernaillen/nuxt-base-layer'
+  ],
+
   modules: [
     '@nuxt/image',
     '@nuxthq/ui',
@@ -63,5 +68,5 @@ export default defineNuxtConfig({
     enabled: true
   },
 
-  debug: true
+  debug: false
 })
