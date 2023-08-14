@@ -4,7 +4,7 @@ describe('Homepage', () => {
   it('Contains intro', () => {
     cy.visit('/')
     cy.contains('h3', 'wouter on the net')
-    cy.contains('p', 'Wouter Vernaillen')
+    cy.contains('div', 'Wouter Vernaillen')
   })
 
   it('Contains correct number of links', () => {

@@ -11,7 +11,7 @@
       class="hover:text-primary mx-2"
       target="_blank"
     >
-      <UButton color="primary" variant="soft" :icon="social.icon" size="xs" />
+      <UButton color="gray" :icon="social.icon" size="2xs" />
     </NuxtLink>
   </div>
 </template>

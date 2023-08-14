@@ -3,11 +3,10 @@
     <div class="mt-8 mb-6">
       <SocialIcons />
     </div>
-    <div class="mt-5 mb-1 text-md font-bold tracking-wide">
+    <div class="my-5 mb-2 text-primary-500">
       Wouter Vernaillen
     </div>
     <p class="text-sm mb-2 prose dark:prose-invert">
-      earthling<br>
       ecstatic dance dj & trance dance facilitator<br>
       modular synth noodler (eurorack)<br>
       freelance fullstack java/js developer<br>
