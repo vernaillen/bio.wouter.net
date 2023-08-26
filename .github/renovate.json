@@ -5,5 +5,13 @@
   ],
   "assignees": [
     "vernaillen"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "vitest"
+      ],
+      "allowedVersions": "<=0.33"
+    }
   ]
 }
