@@ -35,7 +35,7 @@
     "consola": "^3.2.2",
     "cypress": "^12.17.4",
     "eslint": "^8.48.0",
-    "happy-dom": "^10.11.0",
+    "happy-dom": "^11.0.0",
     "jsdom": "^22.1.0",
     "nuxt": "^3.7.0",
     "nuxt-multi-cache": "^3.1.1",
