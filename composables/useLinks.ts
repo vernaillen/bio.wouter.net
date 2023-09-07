@@ -7,7 +7,7 @@ export function useLinks (): Link[] {
       content: 'Healing power of sound, music and dance:<br>Ecstatic dance, immersive soundbaths, music production,...',
       url: 'https://harmonics.be',
       urlDisplay: 'harmonics.be',
-      image: 'https://harmonics.vercel.app/images/harmonics_svglogo_bol.png'
+      image: 'https://harmonics.be/images/harmonics_svglogo_bol.png'
     },
     {
       label: 'new: Mastodon feed',
