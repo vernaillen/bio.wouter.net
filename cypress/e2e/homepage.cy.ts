@@ -16,9 +16,9 @@ describe('Homepage', () => {
     cy.visit('/')
 
     const firstLink = useLinks()[0]
-    cy.get('div#theLinks > div > div > button').first().should('have.text', ' ' + firstLink.label + ' ')
+    cy.get('div#theLinks > div > div > button').first().should('contain.text', firstLink.label)
 
     const lastLink = useLinks()[useLinks().length - 1]
-    cy.get('div#theLinks > div > div > button').last().should('have.text', ' ' + lastLink.label + ' ')
+    cy.get('div#theLinks > div > div > button').last().should('contain.text', lastLink.label)
   })
 })

@@ -17,7 +17,7 @@ export function useLinks (): Link[] {
       image: 'https://harmonics.be/images/harmonics_svglogo_bol.png'
     },
     {
-      label: 'new: Mastodon feed',
+      label: 'Mastodon feed',
       content: 'Social feed on <a href="https://vernaillen.dev/feed" target="_blank">vernaillen.dev</a> fetching posts from my <a href="https://elk.zone/fosstodon.org/@vernaillen" target="_blank">Mastodon account</a>',
       icon: 'i-logos-mastodon-icon',
       url: 'https://vernaillen.dev/feed',
