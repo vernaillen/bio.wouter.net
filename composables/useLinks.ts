@@ -3,7 +3,7 @@ import type { Link } from '~~/types/link'
 export function useLinks (): Link[] {
   return [
     {
-      label: 'Harmonics.be',
+      label: 'Harmonics.be - new dates !',
       content: 'Healing power of sound, music and dance:<br>Ecstatic dance, immersive soundbaths, music production,...',
       url: 'https://harmonics.be',
       urlDisplay: 'harmonics.be',

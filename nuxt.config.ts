@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/image',
-    '@nuxthq/ui',
+    '@nuxt/ui',
     '@nuxtjs/plausible',
     'nuxt-vitest'
   ],

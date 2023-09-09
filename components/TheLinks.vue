@@ -6,8 +6,10 @@
           <UButton
             color="gray"
             :block="true"
+            :label="item.label"
+            truncate
             class="z-50 relative"
-            :ui="{ padding: { sm: 'p-3' } }"
+            :ui="{ padding: { sm: 'py-3 pl-3 pr-7' } }"
           >
             <template #leading>
               <UIcon v-if="item.icon" :name="item.icon" class="mr-1 block dark:hidden" :class="item.iconClass" />
@@ -19,7 +21,6 @@
                 class="h-5 mr-1"
               >
             </template>
-            {{ item.label }}
             <template #trailing>
               <UIcon
                 name="i-heroicons-chevron-right-20-solid"
