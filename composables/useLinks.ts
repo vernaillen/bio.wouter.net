@@ -3,14 +3,14 @@ import type { Link } from '~~/types/link'
 export function useLinks (): Link[] {
   return [
     {
-      label: 'Trance Dance Croix ou Pile',
-      content: 'new trance dance dates announced on Harmonics.be',
+      label: '~ Dance Your Inner Freedom ~',
+      content: 'new trance dance dates on Harmonics.be',
       url: 'https://harmonics.be/en/news/trancedancecroixoupile',
       urlDisplay: 'harmonics.be',
       image: 'https://harmonics.be/images/harmonics-trance.svg'
     },
     {
-      label: 'Harmonics.be - Fresh design!',
+      label: 'Harmonics.be - New look!',
       content: 'Healing power of sound, music and dance:<br>Ecstatic dance, immersive soundbaths, music production,...',
       url: 'https://harmonics.be',
       urlDisplay: 'harmonics.be',
