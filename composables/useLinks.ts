@@ -5,7 +5,7 @@ export function useLinks (): Link[] {
     {
       label: '~ Dance Your Inner Freedom ~',
       content: 'new trance dance dates on Harmonics.be',
-      url: 'https://harmonics.be/en/news/trancedancecroixoupile',
+      url: 'https://harmonics.be/en/news/trancedancedehierberg',
       urlDisplay: 'harmonics.be',
       image: 'https://harmonics.be/images/harmonics-trance.svg'
     },
