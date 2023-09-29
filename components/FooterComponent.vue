@@ -1,6 +1,9 @@
 <template>
   <footer class="prose dark:prose-invert max-w-full text-center">
-    <div class="pt-16 text-sm">
+    <div class="pt-8 text-sm">
+      <LanguageSwitcher class="inline-flex"/>
+    </div>
+    <div class="pt-4 text-sm">
       &copy; <nuxt-time :datetime="new Date()" year="numeric" />
       <NuxtLink href="https://vernaillen.dev" target="_blank">
         Wouter Vernaillen

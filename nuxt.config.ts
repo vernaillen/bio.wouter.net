@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@nuxt/ui',
+    '@nuxtjs/i18n',
     '@nuxtjs/plausible',
     'nuxt-vitest'
   ],
@@ -27,11 +28,28 @@ export default defineNuxtConfig({
     apiHost: 'https://bio.wouter.net/plio'
   },
 
+  ui: {
+    icons: ['circle-flags', 'heroicons', 'mdi']
+  },
+
+  i18n: {
+    detectBrowserLanguage: {
+      useCookie: true,
+      redirectOn: 'root'
+    },
+    locales: [
+      { code: 'nl', iso: 'en-BE', file: 'nl-BE.json' },
+      { code: 'en', iso: 'en-US', file: 'en-US.json' }
+    ],
+    langDir: 'locales/',
+    lazy: false,
+    defaultLocale: 'nl',
+    strategy: 'prefix_except_default'
+  },
+
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      htmlAttrs: {
-        lang: 'en'
-      },
       title: 'wouter on the net: the links',
       meta: [
         { name: 'description', content: 'Wouter Vernaillen: Sound alchemist, Ecstatic Dance DJ, Trance Dance facilitator, Freelance Java/JS Developer, Forever learning...' },

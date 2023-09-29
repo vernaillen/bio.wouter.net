@@ -1,6 +1,10 @@
+<script setup lang="ts">
+const { locale } = useI18n()
+</script>
+
 <template>
   <div id="theLinks">
-    <UAccordion :items="useLinks()" :ui="{ item: { padding: 'pt-0 -mt-2 pb-3' } }">
+    <UAccordion :items="useLinks(locale)" :ui="{ item: { padding: 'pt-0 -mt-2 pb-3' } }">
       <template #default="{ item, open }">
         <div class="bg-white rounded-lg mt-2">
           <UButton

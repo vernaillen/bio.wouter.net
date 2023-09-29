@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
+const { t } = useI18n()
 </script>
 
 <template>
@@ -7,7 +8,7 @@ const colorMode = useColorMode()
     <div class="container mt-0 text-center relative">
       <IconLogo class="block mt-0 mb-5 mx-auto" />
       <h3 class="mb-5 font-semibold tracking-wide text-dark dark:text-light text-2xl">
-        wouter <span class="text-primary-500 font-semibold">on the</span> net
+        {{ t('onthe1')}} <span class="text-primary-500 font-semibold">{{ t('onthe2') }}</span> {{ t('onthe3') }}
       </h3>
       <UIcon
         v-show="colorMode.value === 'dark'"
