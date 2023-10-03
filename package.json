@@ -42,7 +42,7 @@
     "jsdom": "^22.1.0",
     "nuxt": "^3.7.4",
     "nuxt-multi-cache": "^3.1.1",
-    "nuxt-vitest": "^0.10.5",
+    "nuxt-vitest": "^0.11.0",
     "start-server-and-test": "^2.0.1",
     "typescript": "^5.2.2",
     "vitest": "0.33.0",
