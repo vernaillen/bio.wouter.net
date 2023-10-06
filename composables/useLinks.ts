@@ -4,6 +4,13 @@ export function useLinks (lang: string): Link[] {
   if (lang === 'en') {
     return [
       {
+        label: 'New Moon ~ Cacao ~ Ecstatic Dance',
+        content: 'Join us on Sunday afternoon October 15 for our New Maan ~ Cacao ~ Ecstatic Dance!',
+        url: 'https://harmonics.be/en/news/nieuwemaancacaoecstaticdance',
+        urlDisplay: 'harmonics.be',
+        image: 'https://harmonics.be/images/harmonics-ecstatic.svg'
+      },
+      {
         label: 'Dance Your Inner Freedom',
         content: 'new trance dance dates on Harmonics.be',
         url: 'https://harmonics.be/en/news/trancedancedehierberg',
@@ -16,13 +23,6 @@ export function useLinks (lang: string): Link[] {
         url: 'https://harmonics.be/en',
         urlDisplay: 'harmonics.be',
         image: 'https://harmonics.be/images/harmonics_svglogo_bol.png'
-      },
-      {
-        label: 'Mastodon feed',
-        content: 'Social feed on <a href="https://vernaillen.dev/feed" target="_blank">vernaillen.dev</a> fetching posts from my <a href="https://elk.zone/fosstodon.org/@vernaillen" target="_blank">Mastodon account</a>',
-        icon: 'i-logos-mastodon-icon',
-        url: 'https://vernaillen.dev/feed',
-        urlDisplay: 'vernaillen.dev/feed'
       },
       {
         label: 'Are you Nuxt?',
@@ -67,6 +67,13 @@ export function useLinks (lang: string): Link[] {
   } else {
     return [
       {
+        label: 'Nieuwe Maan ~ Cacao ~ Ecstatic Dance',
+        content: 'Kom op zondagnamiddag, 15 oktober, genieten van onze Nieuwe Maan ~ Cacao ~ Ecstatic Dance!',
+        url: 'https://harmonics.be/news/nieuwemaancacaoecstaticdance',
+        urlDisplay: 'harmonics.be',
+        image: 'https://harmonics.be/images/harmonics-ecstatic.svg'
+      },
+      {
         label: 'Dance Your Inner Freedom',
         content: 'nieuwe trancedans datums op Harmonics.be',
         url: 'https://harmonics.be/news/trancedancedehierberg',
@@ -79,13 +86,6 @@ export function useLinks (lang: string): Link[] {
         url: 'https://harmonics.be',
         urlDisplay: 'harmonics.be',
         image: 'https://harmonics.be/images/harmonics_svglogo_bol.png'
-      },
-      {
-        label: 'Mastodon feed',
-        content: 'Social feed on <a href="https://vernaillen.dev/feed" target="_blank">vernaillen.dev</a> fetching posts from my <a href="https://elk.zone/fosstodon.org/@vernaillen" target="_blank">Mastodon account</a>',
-        icon: 'i-logos-mastodon-icon',
-        url: 'https://vernaillen.dev/feed',
-        urlDisplay: 'vernaillen.dev/feed'
       },
       {
         label: 'Ben jij Nuxt?',
