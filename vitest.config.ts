@@ -11,6 +11,8 @@ export default defineVitestConfig({
       nuxt: {
         rootDir: fileURLToPath(new URL('./', import.meta.url))
       }
-    }
+    },
+    setupFiles: ['./tests/setup/i18n.ts'],
+    globals: true
   }
 })

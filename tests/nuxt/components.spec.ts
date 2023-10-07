@@ -24,7 +24,7 @@ describe('components', () => {
     const component = await mount(HeaderComponent)
     expect(component.vm).toBeTruthy()
     expect(component.html()).toMatch('<header')
-    expect(component.html()).toMatch('wouter')
+    expect(component.html()).toContain('wouter')
   })
 
   it('Renders IconLogo', async () => {
