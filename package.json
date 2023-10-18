@@ -25,7 +25,7 @@
     "@iconify-json/material-symbols": "^1.1.59",
     "@iconify-json/mdi": "^1.1.54",
     "@iconify-json/uil": "^1.1.5",
-    "@nuxt/devtools": "1.0.0-beta.0",
+    "@nuxt/devtools": "1.0.0",
     "@nuxt/image": "1.0.0-rc.3",
     "@nuxt/ui": "^2.9.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
