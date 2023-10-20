@@ -12,6 +12,15 @@
         "vitest"
       ],
       "allowedVersions": "<=0.33"
+    },
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "cimg/node"
+      ],
+      "allowedVersions": "<=18.18"
     }
   ]
 }
