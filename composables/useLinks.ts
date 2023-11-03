@@ -4,21 +4,7 @@ export function useLinks (lang: string): Link[] {
   if (lang === 'en') {
     return [
       {
-        label: 'New Moon ~ Cacao ~ Ecstatic Dance',
-        content: 'Join us on Sunday afternoon October 15 for our New Maan ~ Cacao ~ Ecstatic Dance!',
-        url: 'https://harmonics.be/en/news/nieuwemaancacaoecstaticdance',
-        urlDisplay: 'harmonics.be',
-        image: 'https://harmonics.be/images/harmonics-ecstatic.svg'
-      },
-      {
-        label: 'Dance Your Inner Freedom',
-        content: 'new trance dance dates on Harmonics.be',
-        url: 'https://harmonics.be/en/news/trancedancedehierberg',
-        urlDisplay: 'harmonics.be',
-        image: 'https://harmonics.be/images/harmonics-trance.svg'
-      },
-      {
-        label: 'Harmonics.be - New design',
+        label: 'Harmonics.be',
         content: 'Healing power of sound, music and dance:<br>Ecstatic dance, immersive soundbaths, music production,...',
         url: 'https://harmonics.be/en',
         urlDisplay: 'harmonics.be',
@@ -67,21 +53,7 @@ export function useLinks (lang: string): Link[] {
   } else {
     return [
       {
-        label: 'Nieuwe Maan ~ Cacao ~ Ecstatic Dance',
-        content: 'Kom op zondagnamiddag, 15 oktober, genieten van onze Nieuwe Maan ~ Cacao ~ Ecstatic Dance!',
-        url: 'https://harmonics.be/news/nieuwemaancacaoecstaticdance',
-        urlDisplay: 'harmonics.be',
-        image: 'https://harmonics.be/images/harmonics-ecstatic.svg'
-      },
-      {
-        label: 'Dance Your Inner Freedom',
-        content: 'nieuwe trancedans datums op Harmonics.be',
-        url: 'https://harmonics.be/news/trancedancedehierberg',
-        urlDisplay: 'harmonics.be',
-        image: 'https://harmonics.be/images/harmonics-trance.svg'
-      },
-      {
-        label: 'Harmonics.be - Nieuwe huisstijl',
+        label: 'Harmonics.be',
         content: 'Genezende kracht van geluid, muziek en dans:<br>Ecstatic dance, immersive soundbaths, muziek productie,...',
         url: 'https://harmonics.be',
         urlDisplay: 'harmonics.be',
