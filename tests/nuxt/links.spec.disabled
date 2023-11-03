@@ -1,0 +1,46 @@
+import { describe, expect, it } from 'vitest'
+import { mount } from '@vue/test-utils'
+import { mockNuxtImport } from 'vitest-environment-nuxt/utils'
+import TheLinks from '~/components/TheLinks.vue'
+
+mockNuxtImport('useI18n', () => {
+  return () => {
+    return {
+      locale: 'en'
+    }
+  }
+})
+
+mockNuxtImport('useLinks', () => {
+  return (lang: string) => {
+    if (lang === 'en') {
+      return [
+        {
+          label: 'Harmonics.be',
+          content: 'Healing power of sound, music and dance:<br>Ecstatic dance, immersive soundbaths, music production,...',
+          url: 'https://harmonics.be/en',
+          urlDisplay: 'harmonics.be',
+          image: 'https://harmonics.be/images/harmonics_svglogo_bol.png'
+        }
+      ]
+    } else {
+      return [
+        {
+          label: 'Harmonics.be',
+          content: 'Genezende kracht van geluid, muziek en dans:<br>Ecstatic dance, immersive soundbaths, muziek productie,...',
+          url: 'https://harmonics.be',
+          urlDisplay: 'harmonics.be',
+          image: 'https://harmonics.be/images/harmonics_svglogo_bol.png'
+        }
+      ]
+    }
+  }
+})
+
+describe('links', () => {
+  it('Renders The Links', async () => {
+    const component = await mount(TheLinks)
+    expect(component.html()).toMatch('<div class="w-full')
+    expect(component.html()).toMatch('wouter')
+  })
+})
