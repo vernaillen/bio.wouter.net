@@ -37,7 +37,7 @@
     "cypress": "^13.6.0",
     "eslint": "^8.54.0",
     "happy-dom": "12.10.3",
-    "jsdom": "^22.1.0",
+    "jsdom": "^23.0.0",
     "nuxt": "^3.8.2",
     "nuxt-multi-cache": "^3.1.1",
     "nuxt-vitest": "^0.11.5",
