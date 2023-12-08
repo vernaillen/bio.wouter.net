@@ -3,13 +3,13 @@ import { createPage, setup } from '@nuxt/test-utils'
 import { describe, expect, it } from 'vitest'
 
 await setup({
-    rootDir: fileURLToPath(new URL('../', import.meta.url)),
-    browser: true,
+  rootDir: fileURLToPath(new URL('../', import.meta.url)),
+  browser: true
 })
 
-describe('browser', async () => {
-    it('runs a test', async () => {
-        const page = await createPage('/')
-        expect(page.getByRole('heading').innerText()).toContain('Welcome to Nuxt!??')
-    })
+describe('browser', () => {
+  it('runs a test', async () => {
+    const page = await createPage('/')
+    expect(page.getByRole('heading').innerText()).toContain('Welcome to Nuxt!??')
+  })
 })
