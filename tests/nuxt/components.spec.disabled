@@ -1,9 +1,14 @@
-// @vitest-environment nuxt
-import { mount } from '@vue/test-utils'
+import { fileURLToPath } from 'node:url'
+import { mount, setup } from '@nuxt/test-utils'
 import { describe, it, expect } from 'vitest'
 import { mockNuxtImport } from 'vitest-environment-nuxt/utils'
 import HeaderComponent from '~/components/HeaderComponent.vue'
 import IconLogo from '~/components/IconLogo.vue'
+
+await setup({
+  rootDir: fileURLToPath(new URL('../', import.meta.url)),
+  browser: true,
+})
 
 mockNuxtImport('useColorMode', () => {
   return () => {

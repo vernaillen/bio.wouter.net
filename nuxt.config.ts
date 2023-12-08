@@ -9,8 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxtjs/i18n',
-    '@nuxtjs/plausible',
-    'nuxt-vitest'
+    '@nuxtjs/plausible'
   ],
 
   colorMode: {
