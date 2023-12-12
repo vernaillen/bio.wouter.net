@@ -18,22 +18,22 @@
     "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run coverage && pnpm run cy:local"
   },
   "devDependencies": {
-    "@iconify-json/arcticons": "^1.1.85",
-    "@iconify-json/circle-flags": "^1.1.45",
-    "@iconify-json/game-icons": "^1.1.6",
-    "@iconify-json/logos": "^1.1.40",
-    "@iconify-json/material-symbols": "^1.1.65",
-    "@iconify-json/mdi": "^1.1.59",
-    "@iconify-json/uil": "^1.1.7",
+    "@iconify-json/arcticons": "^1.1.86",
+    "@iconify-json/circle-flags": "^1.1.46",
+    "@iconify-json/game-icons": "^1.1.7",
+    "@iconify-json/logos": "^1.1.41",
+    "@iconify-json/material-symbols": "^1.1.67",
+    "@iconify-json/mdi": "^1.1.61",
+    "@iconify-json/uil": "^1.1.8",
     "@nuxt/devtools": "1.0.5",
     "@nuxt/image": "1.1.0",
     "@nuxt/test-utils": "latest",
-    "@nuxt/ui": "^2.11.0",
+    "@nuxt/ui": "^2.11.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/i18n": "8.0.0-rc.8",
     "@nuxtjs/plausible": "^0.2.4",
     "@vernaillen/nuxt-base-layer": "^0.2.21",
-    "@vitest/coverage-v8": "^1.0.2",
+    "@vitest/coverage-v8": "^1.0.4",
     "@vueuse/nuxt": "^10.7.0",
     "cypress": "^13.6.1",
     "eslint": "^8.55.0",
@@ -45,6 +45,6 @@
     "playwright-core": "^1.40.1",
     "start-server-and-test": "^2.0.3",
     "typescript": "^5.3.3",
-    "vitest": "1.0.2"
+    "vitest": "1.0.4"
   }
 }
