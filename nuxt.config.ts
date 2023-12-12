@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
   extends: [
+    '@nuxt/ui-pro',
     '@vernaillen/nuxt-base-layer'
   ],
 
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   },
 
   ui: {
-    icons: ['circle-flags', 'heroicons', 'mdi']
+    icons: 'all'
   },
 
   i18n: {

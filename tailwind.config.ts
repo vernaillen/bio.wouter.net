@@ -35,17 +35,6 @@ module.exports = {
   mode: 'jit',
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    screens: {
-      sm: '540px',
-      md: '540px',
-      lg: '540px',
-      xl: '540px',
-      '2xl': '540px'
-    },
-    container: {
-      center: true,
-      padding: '16px'
-    },
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
