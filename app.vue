@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const { t } = useI18n()
 if (process.client) {
   const hostname = window.location.hostname
   if (
@@ -14,16 +13,20 @@ if (process.client) {
 
 <template>
   <UHeader title=" " class="border-b-0">
-    <template #top>
-    </template>
+    <template #top />
     <template #center>
-      <IconLogo class="absolute mx-auto top-0 left-0 right-0"/>
+      <IconLogo class="absolute mx-auto top-0 left-0 right-0" />
     </template>
     <template #right>
       <UColorModeButton class="text-primary-500 hover:text-primary-500 opacity-80 hover:opacity-100" />
-      <UButton icon="i-simple-icons-github" to="https://github.com/vernaillen/bio.wouter.net" 
+      <UButton
+        icon="i-simple-icons-github"
+        to="https://github.com/vernaillen/bio.wouter.net"
         class="text-primary-500 hover:text-primary-500 opacity-80 hover:opacity-100"
-        target="_blank" color="gray" variant="ghost" />
+        target="_blank"
+        color="gray"
+        variant="ghost"
+      />
     </template>
   </UHeader>
 
@@ -33,7 +36,7 @@ if (process.client) {
 
   <UFooter>
     <template #top>
-      <LanguageSwitcher class="flex w-full justify-center"/>
+      <LanguageSwitcher class="flex w-full justify-center" />
     </template>
     <template #center>
       <div class="prose dark:prose-invert items-center text-center mx-auto">

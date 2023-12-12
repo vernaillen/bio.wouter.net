@@ -67,7 +67,7 @@ export function useLinks (lang: string): Link[] {
         url: 'https://harmonics.be/news/trancedancethepassionofyourdreams',
         urlDisplay: 'harmonics.be',
         image: 'https://harmonics.be/images/harmonics-trance.svg'
-      },*/
+      }, */
       {
         label: 'Harmonics.be',
         content: 'Genezende kracht van geluid, muziek en dans:<br>Ecstatic dance, immersive soundbaths, muziek productie,...',

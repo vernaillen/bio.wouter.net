@@ -6,8 +6,8 @@ const { t } = useI18n()
   <UPage class="mt-5 text-center text-dark dark:text-gray-200">
     <UContainer>
       <h3 class="mb-5 font-semibold tracking-wide text-dark dark:text-light text-2xl">
-          wouter <span class="text-primary-500 font-semibold">{{ t('onthe2') }}</span> net
-        </h3>
+        wouter <span class="text-primary-500 font-semibold">{{ t('onthe2') }}</span> net
+      </h3>
       <div class="mt-8 mb-6">
         <SocialIcons />
       </div>
