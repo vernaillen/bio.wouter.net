@@ -3,6 +3,7 @@ import type { Link } from '~~/types/link'
 export function useLinks (lang: string): Link[] {
   if (lang === 'en') {
     return [
+      /*
       {
         label: 'Trance Dance: The Passion of your Dreams',
         content: 'Trance Dance sesson on Monday December 4 at De Ringelwikke in Ronse',
@@ -10,6 +11,7 @@ export function useLinks (lang: string): Link[] {
         urlDisplay: 'harmonics.be',
         image: 'https://harmonics.be/images/harmonics-trance.svg'
       },
+      */
       {
         label: 'Harmonics.be',
         content: 'Healing power of sound, music and dance:<br>Ecstatic dance, immersive soundbaths, music production,...',
@@ -59,13 +61,13 @@ export function useLinks (lang: string): Link[] {
     ]
   } else {
     return [
-      {
+      /* {
         label: 'Trancedans: The Passion of your Dreams',
         content: 'Trancedans sessie op maandagavond 4 december in De Ringelwikke in Ronse',
         url: 'https://harmonics.be/news/trancedancethepassionofyourdreams',
         urlDisplay: 'harmonics.be',
         image: 'https://harmonics.be/images/harmonics-trance.svg'
-      },
+      },*/
       {
         label: 'Harmonics.be',
         content: 'Genezende kracht van geluid, muziek en dans:<br>Ecstatic dance, immersive soundbaths, muziek productie,...',
