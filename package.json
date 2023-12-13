@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.156",
-    "@nuxt/devtools": "1.0.5",
+    "@nuxt/devtools": "1.0.6",
     "@nuxt/image": "1.1.0",
     "@nuxt/test-utils": "latest",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
