@@ -22,8 +22,8 @@
     "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run coverage && pnpm run cy:local"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.156",
-    "@nuxt/devtools": "1.0.5",
+    "@iconify/json": "^2.2.157",
+    "@nuxt/devtools": "1.0.6",
     "@nuxt/image": "1.1.0",
     "@nuxt/test-utils": "latest",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
