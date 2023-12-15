@@ -5,6 +5,7 @@
   "repository": "https://github.com/vernaillen/bio.wouter.net",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -22,27 +23,22 @@
     "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run coverage && pnpm run cy:local"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.157",
+    "@iconify/json": "^2.2.158",
     "@nuxt/devtools": "1.0.6",
     "@nuxt/image": "1.1.0",
-    "@nuxt/test-utils": "latest",
+    "@nuxt/test-utils": "v3.9.0-alpha.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nuxtjs/i18n": "8.0.0-rc.9",
+    "@nuxtjs/i18n": "8.0.0-rc.11",
     "@nuxtjs/plausible": "^0.2.4",
     "@vernaillen/nuxt-base-layer": "^0.2.21",
     "@vitest/coverage-v8": "^1.0.4",
+    "@vue/test-utils": "^2.4.3",
     "@vueuse/nuxt": "^10.7.0",
     "cypress": "^13.6.1",
     "eslint": "^8.55.0",
-    "happy-dom": "12.10.3",
-    "jsdom": "^23.0.1",
     "nuxt": "^3.8.2",
-    "nuxt-multi-cache": "^3.1.1",
-    "nuxt-vitest": "^0.11.5",
-    "playwright-core": "^1.40.1",
     "start-server-and-test": "^2.0.3",
-    "typescript": "^5.3.3",
-    "vitest": "^1.0.4"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "@nuxt/ui-pro": "^0.6.1"
