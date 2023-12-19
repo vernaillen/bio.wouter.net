@@ -27,10 +27,6 @@ export default defineNuxtConfig({
     apiHost: 'https://bio.wouter.net/plio'
   },
 
-  ui: {
-    icons: 'all'
-  },
-
   i18n: {
     detectBrowserLanguage: {
       useCookie: true,
