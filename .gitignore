@@ -9,3 +9,5 @@ dist
 coverage/
 .vercel
 .unlighthouse/
+cypress/screenshots/homepage.cy.ts/Homepage -- Contains correct number of links (failed).png
+cypress/screenshots/homepage.cy.ts/Homepage -- First & last link contain correct label (failed).png
