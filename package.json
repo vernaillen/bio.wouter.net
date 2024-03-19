@@ -23,7 +23,7 @@
     "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run coverage && pnpm run cy:local"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.192",
+    "@iconify/json": "^2.2.193",
     "@nuxt/devtools": "1.0.8",
     "@nuxt/fonts": "^0.3.0",
     "@nuxt/image": "^1.4.0",
@@ -37,7 +37,7 @@
     "@vueuse/nuxt": "^10.9.0",
     "cypress": "^13.7.0",
     "eslint": "^8.57.0",
-    "nuxt": "^3.11.0",
+    "nuxt": "^3.11.1",
     "start-server-and-test": "^2.0.3",
     "typescript": "^5.4.2"
   },
