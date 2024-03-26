@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    provider: 'twicpics',
+    provider: 'vercel',
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/biowouter/'
     }
